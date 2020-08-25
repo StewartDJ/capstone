@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/capstone/static/css/main.ce9e93c5.chunk.css",
+    "main.js": "/capstone/static/js/main.58d7197f.chunk.js",
+    "main.js.map": "/capstone/static/js/main.58d7197f.chunk.js.map",
+    "runtime-main.js": "/capstone/static/js/runtime-main.242b889f.js",
+    "runtime-main.js.map": "/capstone/static/js/runtime-main.242b889f.js.map",
+    "static/js/2.b06abf86.chunk.js": "/capstone/static/js/2.b06abf86.chunk.js",
+    "static/js/2.b06abf86.chunk.js.map": "/capstone/static/js/2.b06abf86.chunk.js.map",
+    "index.html": "/capstone/index.html",
+    "precache-manifest.d7ad9f56c8d7008367bf99ef56cceb92.js": "/capstone/precache-manifest.d7ad9f56c8d7008367bf99ef56cceb92.js",
+    "service-worker.js": "/capstone/service-worker.js",
+    "static/css/main.ce9e93c5.chunk.css.map": "/capstone/static/css/main.ce9e93c5.chunk.css.map",
+    "static/js/2.b06abf86.chunk.js.LICENSE.txt": "/capstone/static/js/2.b06abf86.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.242b889f.js",
+    "static/js/2.b06abf86.chunk.js",
+    "static/css/main.ce9e93c5.chunk.css",
+    "static/js/main.58d7197f.chunk.js"
+  ]
+}
