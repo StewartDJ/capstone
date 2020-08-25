@@ -1,3 +1,4 @@
+  
 import React from 'react';
 import './style.css';
 // import "bootstrap/dist/css/bootstrap.min.css"
@@ -18,4 +19,4 @@ function App() {
   );
 }
 
-export default App;
+export default App
