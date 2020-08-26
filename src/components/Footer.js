@@ -7,7 +7,7 @@ export default class Footer extends Component {
         return (
             <div class="layoutTestGreen footer">
             
-  
+            <Link></Link>
             </div>
         )
     }
