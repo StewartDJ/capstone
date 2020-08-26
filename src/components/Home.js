@@ -8,8 +8,8 @@ export default class Home extends Component {
 <div class="layoutTestYellow pageBody">
 <div class="layoutTestBlue left pageBody">
 <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
-  <div class="carousel-inner">
-    <div class="carousel-item active">
+  <div className="carousel-inner">
+    <div className="carousel-item active">
       <img class="d-block w-100" src={require('../assets/tourist2.jpg')} alt="First slide"/>
     </div>
     <div class="carousel-item">
@@ -21,41 +21,43 @@ export default class Home extends Component {
   </div>
 </div>
 </div>
+
+
 <div class="layoutTestRed right pageBody">
 <div class="imgWithText">
 <div class="layoutElements">
 <img src={require('../assets/Union2.jpg')} alt="arcade"/>
-    <p class="bottom-left">Words</p> 
+    <p class="bottom-left">VIEW</p> 
 </div>
 </div>
 <div class="imgWithText">
 <div class="layoutElements">
 <img src={require('../assets/arcade.jpg')} alt="arcade"/>
-    <p class="bottom-left">Words</p> 
+    <p class="bottom-left">PLAY</p> 
 </div>
 </div>
 <div class="imgWithText">
 <div class="layoutElements">
     <img src={require('../assets/CAC3.jpg')} alt="CAC"/>
-    <p class="bottom-left">Words</p> 
+    <p class="bottom-left">ART</p> 
 </div>
 </div>
 <div class="imgWithText">
 <div class="layoutElements">
 <img src={require('../assets/skatepark3.jpg')} alt="arcade"/>
-    <p class="bottom-left">Words</p> 
+    <p class="bottom-left">SKATE</p> 
 </div>
 </div>
 <div class="imgWithText">
 <div class="layoutElements">
 <img src={require('../assets/otherMuseum.jpg')} alt="arcade"/>
-    <p class="bottom-left">Words</p> 
+    <p class="bottom-left">LEARN</p> 
 </div>
 </div>
 <div class="imgWithText">
 <div class="layoutElements">
 <img src={require('../assets/newport1.jpg')} alt="arcade"/>
-    <p class="bottom-left">Words</p> 
+    <p class="bottom-left">SHOP</p> 
 </div>
 </div>
 </div>
