@@ -1,10 +1,14 @@
-  
 import React from 'react';
 import "bootstrap/dist/css/bootstrap.min.css"
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import Navbar from "./components/navbar";
 import addLocations from "./components/addLocations";
 import allLocations from "./components/allLocations";
+<<<<<<< HEAD
+=======
+import Home from "./components/Home";
+import Footer from "./components/Footer";
+>>>>>>> 46744cc6c86e8ddb973350126269f93741eff3cd
 import contacts from "./components/contacts";
 import './style.css';
 
@@ -12,7 +16,6 @@ import './style.css';
 function App() {
   return (
     <BrowserRouter>
-     
     <div className="pageContain">
     <Navbar />
     <Switch>
@@ -20,12 +23,18 @@ function App() {
     <Route path='/allLocations' component={allLocations} />
     <Route path='/contacts' component={contacts} />
     </Switch>
+<<<<<<< HEAD
     {/* <Footer/> */}
       <header className="App-header">
+=======
+
+
+>>>>>>> 46744cc6c86e8ddb973350126269f93741eff3cd
         <div id="bannerWrapper">
         <p className="bannerText">Welcome to Cincinnati</p>
         <img src={require('./banner.jpg')} alt=""/>
         </div>
+<<<<<<< HEAD
       
       </header>
       </div>
@@ -116,3 +125,15 @@ export default App;
 </div>
 </div> */}
 
+=======
+     
+     
+      <Home />
+      <Footer />
+      </div>
+      </BrowserRouter>
+
+  )
+}
+export default App;
+>>>>>>> 46744cc6c86e8ddb973350126269f93741eff3cd
