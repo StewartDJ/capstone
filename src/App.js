@@ -2,15 +2,16 @@
 import React from 'react';
 import "bootstrap/dist/css/bootstrap.min.css"
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
-import Navbar from "./components/Navbar"
+import Navbar from "./components/Navbar";
 import './style.css';
 
 
 function App() {
   return (
     <Router>
+ 
      
-    <div className="container">
+    <div className="pageContain">
     <Navbar />
       <header className="App-header">
         <div id="bannerWrapper">

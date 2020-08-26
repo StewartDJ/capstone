@@ -5,11 +5,10 @@ import { Link } from 'react-router-dom'
 export default class Navbar extends Component {
     render() {
         return (
-            <nav className="navbar navbar-dark bg-dark navbar-expand-lg"> 
+            <nav class="navbar navbar-dark bg-dark justify-content-between">
+                <a class="navbar-brand">TravelSpot</a>
 
-                <Link to="/" className="navbar-brand">Generic Travel Page Name</Link>
-                <div className="collapse navbar-collapse">
-                    <ul className="navbar-nav mr-auto"> 
+                <ul className="navbar-nav mr-auto"> 
                         <li className="navbar-item">
                             <Link to="/" className="nav-link">Home </Link>
                             </li>
@@ -30,8 +29,13 @@ export default class Navbar extends Component {
                             </li>
 
                         </ul>
-                    </div>
-            </nav>
+
+
+                <form class="form-inline">
+                  <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" />
+                  <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                </form>
+                </nav>
         )
     }
 }
