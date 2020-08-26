@@ -1,7 +1,7 @@
   
 import React from 'react';
 import "bootstrap/dist/css/bootstrap.min.css"
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router} from "react-router-dom";
 import Navbar from "./components/Navbar";
 import './style.css';
 
@@ -9,7 +9,6 @@ import './style.css';
 function App() {
   return (
     <Router>
- 
      
     <div className="pageContain">
     <Navbar />

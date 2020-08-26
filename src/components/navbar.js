@@ -6,7 +6,7 @@ export default class Navbar extends Component {
     render() {
         return (
             <nav class="navbar navbar-dark bg-dark justify-content-between">
-                <a class="navbar-brand">TravelSpot</a>
+                <a class="navbar-brand" href="/">TravelSpot</a>
 
                 <ul className="navbar-nav mr-auto"> 
                         <li className="navbar-item">
