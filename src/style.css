@@ -22,7 +22,7 @@
 }
 
 .layoutTestRed{
-  background-color: red;
+  /* background-color: red; */
   float: left;
   width: 66%;
   height: 56vh;
@@ -32,7 +32,7 @@
 
 
 .layoutTestYellow{
-  background-color: yellow;
+  /* background-color: yellow; */
   width: 100%;
   height: 60vh;
   padding: 20px;
@@ -40,7 +40,8 @@
 
 
 .layoutTestGreen{
-  background-color: green;
+  background-color: black;
+  border-top: 3px solid purple;
   width: 100%;
   height: 50vh;
 }
