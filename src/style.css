@@ -20,3 +20,66 @@
   left: 50%;
   transform: translate(-50%, -50%);
 }
+
+.layoutTestRed{
+  background-color: red;
+  float: left;
+  width: 66%;
+  height: 56vh;
+  overflow-wrap: normal;
+  overflow:hidden;
+}
+
+
+.layoutTestYellow{
+  background-color: yellow;
+  width: 100%;
+  height: 60vh;
+  padding: 20px;
+}
+
+
+.layoutTestGreen{
+  background-color: green;
+  width: 100%;
+  height: 50vh;
+}
+
+
+.layoutTestBlue{
+  background-color: blue;
+ padding-right: 20px;
+  float: left;
+  width: 34%;
+  height: 56vh;
+  overflow: hidden;
+}
+
+.layoutElements{
+  height: 400vh;
+  border: 1px solid black; 
+
+  width: 32%;
+  height: 28vh;
+  float: right;
+  justify-content: space-evenly; 
+  
+}
+
+.pageContain {
+  height:100vh;
+  overflow-y: hidden;
+}
+
+
+.imgWithText{
+  position: relative;
+  text-align: left;
+  color: black;
+  
+}
+.bottom-left {
+  padding: 5px;
+  bottom: 8px;
+  left: 16px;
+} 
