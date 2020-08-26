@@ -11,7 +11,7 @@ function App() {
       <header className="App-header">
         <div id="bannerWrapper">
         <p className="bannerText">Welcome to Cincinnati</p>
-        <img src = "./banner.jpg"/>
+        <img src={require('./banner.jpg')}/>
         </div>
       
       </header>
