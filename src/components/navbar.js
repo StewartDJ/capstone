@@ -2,24 +2,31 @@ import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 
 
-export default class navbar extends Component {
+export default class Navbar extends Component {
     render() {
         return (
             <nav className="navbar navbar-dark bg-dark navbar-expand-lg"> 
 
-                <Link to="/" className="navbar-brand">INSERT A LOGO HERE</Link>
+                <Link to="/" className="navbar-brand">Generic Travel Page Name</Link>
                 <div className="collapse navbar-collapse">
                     <ul className="navbar-nav mr-auto"> 
                         <li className="navbar-item">
-                            <Link to="/" className="nav-link">HOME </Link>
+                            <Link to="/" className="nav-link">Home </Link>
                             </li>
 
+                        
                             <li className="navbar-item">
-                            <Link to="/" className="nav-link"> USER FAVORITES</Link>
+                            <Link to="/allLocations" className="nav-link">All Locations </Link>
                             </li>
 
+
                             <li className="navbar-item">
-                            <Link to="/" className="nav-link"> ADD YOUR FAVORITE LOCATION</Link>
+                            <Link to="/addLocations" className="nav-link">Add Locations </Link>
+                            </li>
+
+
+                            <li className="navbar-item">
+                            <Link to="/contact" className="nav-link">Contact </Link>
                             </li>
 
                         </ul>
@@ -29,4 +36,3 @@ export default class navbar extends Component {
     }
 }
 
-export default navbar;
