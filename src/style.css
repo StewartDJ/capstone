@@ -105,15 +105,6 @@
   padding: 5px;
   bottom: 8px;
   left: 16px;
-<<<<<<< HEAD
-} 
-
-/* .footer{
-  width: 80%;
-  height: 15%;
-  color: gray;
-} */
-=======
   z-index: 100;
   position: absolute;
   color: white;
@@ -152,4 +143,3 @@
   height: 56vh;  
   width: 34%;
 }
->>>>>>> fff7a50b28d671e9ea370b7862d8f1134891893b
