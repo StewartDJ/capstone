@@ -1,17 +1,11 @@
   
 import React from 'react';
 import "bootstrap/dist/css/bootstrap.min.css"
-<<<<<<< HEAD
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import Navbar from "./components/navbar";
 import addLocations from "./components/addLocations";
 import allLocations from "./components/allLocations";
 import contacts from "./components/contacts";
-=======
-import { BrowserRouter as Router} from "react-router-dom";
-import Navbar from "./components/Navbar";
-import Footer from "./components/Footer";
->>>>>>> 58f19d2f7ac6d39e8c163eee39f1949aed58d00d
 import './style.css';
 
 
@@ -26,6 +20,7 @@ function App() {
     <Route path='/allLocations' component={allLocations} />
     <Route path='/contacts' component={contacts} />
     </Switch>
+    {/* <Footer/> */}
       <header className="App-header">
         <div id="bannerWrapper">
         <p className="bannerText">Welcome to Cincinnati</p>
@@ -33,10 +28,16 @@ function App() {
         </div>
       
       </header>
+      </div>
     
-   
+      </BrowserRouter>
+  )
+}
 
-<div class="layoutTestYellow pageBody">
+
+export default App;
+
+{/* <div class="layoutTestYellow pageBody">
    
 
 <div class="layoutTestBlue left pageBody">
@@ -113,16 +114,5 @@ function App() {
 </div>
 
 </div>
-</div>
-<Footer/>
+</div> */}
 
-<<<<<<< HEAD
-    </BrowserRouter>
-=======
-</div>
-</Router>
->>>>>>> 58f19d2f7ac6d39e8c163eee39f1949aed58d00d
-  );
-}
-
-export default App
