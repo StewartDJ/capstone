@@ -6,8 +6,8 @@ export default class Footer extends Component {
     render() {
         return (
             <div class="layoutTestGreen footer">
-
-  
+            
+            <Link></Link>
             </div>
         )
     }
