@@ -7,9 +7,9 @@ export default class Navbar extends Component {
             <nav className="navbar navbar-dark bg-dark justify-content-between navbar-expand-lg">
 
                 <Link to="/" className="navbar-brand" >TravelSpot</Link>
-                <div className="">
+                <div className="justify-content-between">
 
-                <ul className="navbar-nav mr-auto"> 
+                <ul className="navbar-nav mx-auto"> 
                         <li className="navbar-item">
                             <Link to="/" className="nav-link">Home </Link>
                             </li>
