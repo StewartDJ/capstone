@@ -90,3 +90,9 @@
   bottom: 8px;
   left: 16px;
 } 
+
+.footer{
+  width: 80%;
+  height: 15%;
+  color: gray;
+}
