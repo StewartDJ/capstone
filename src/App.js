@@ -1,23 +1,26 @@
   
 import React from 'react';
 import "bootstrap/dist/css/bootstrap.min.css"
-<<<<<<< HEAD
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import Navbar from "./components/navbar"
-=======
-import { BrowserRouter as Router} from "react-router-dom";
-import Navbar from "./components/Navbar";
+import addLocations from "./components/addLocations";
+import allLocations from "./components/allLocations";
+import contacts from "./components/contacts";
 import Footer from "./components/Footer";
->>>>>>> 58f19d2f7ac6d39e8c163eee39f1949aed58d00d
 import './style.css';
 
 
 function App() {
   return (
-    <Router>
+    <BrowserRouter>
      
     <div className="pageContain">
     <Navbar />
+    <Switch>
+    <Route path='/addLocations' component={addLocations} />
+    <Route path='/allLocations' component={allLocations} />
+    <Route path='/contacts' component={contacts} />
+    </Switch>
       <header className="App-header">
         <div id="bannerWrapper">
         <p className="bannerText">Welcome to Cincinnati</p>
@@ -108,6 +111,7 @@ function App() {
 </div>
 <Footer/>
 
+    </BrowserRouter>
 </div>
 </Router>
   );
