@@ -58,12 +58,18 @@
 .layoutElements{
   height: 400vh;
   border: 1px solid black; 
-
+  position: relative;
   width: 32%;
   height: 28vh;
   float: right;
   justify-content: space-evenly; 
-  
+  object-fit: contain;
+  overflow: hidden;
+  color: white;
+}
+
+.layoutElements img{
+  width: 600px;
 }
 
 .pageContain {
@@ -76,6 +82,7 @@
   position: relative;
   text-align: left;
   color: black;
+  text-align: left 
   
 }
 .bottom-left {

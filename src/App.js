@@ -1,13 +1,17 @@
   
 import React from 'react';
+import "bootstrap/dist/css/bootstrap.min.css"
+import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import Navbar from "./components/Navbar"
 import './style.css';
-// import "bootstrap/dist/css/bootstrap.min.css"
-// import Navbar from "./components/navbar"
+
 
 function App() {
   return (
-    
-    <div className="App">
+    <Router>
+     
+    <div className="container">
+    <Navbar />
       <header className="App-header">
         <div id="bannerWrapper">
         <p className="bannerText">Welcome to Cincinnati</p>
@@ -16,6 +20,8 @@ function App() {
       
       </header>
     </div>
+
+    </Router>
   );
 }
 
