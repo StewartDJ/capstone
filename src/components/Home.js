@@ -35,7 +35,7 @@ export default class Home extends Component {
 <div className="layoutTestRed right pageBody">
 <div className="imgWithText">
 <div className="layoutElements">
-<img src={require('../assets/Union2.jpg')} alt="arcade"/>
+<img src={require('../assets/Union2.jpg')} alt="union"/>
     <p className="bottom-left">VIEW</p> 
 </div>
 </div>
