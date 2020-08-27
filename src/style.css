@@ -1,3 +1,7 @@
+html {
+  background-color: #f0f0f0;
+  
+}
 .navbar {
   /* background-color: #249a9c !important; */
     background-color:  brown !important;
@@ -48,13 +52,30 @@
  
 }
 
+ul li {
+  list-style: none;
+ 
+}
+
+.yellowText {
+  color: yellow;
+}
+
+
+.footText {
+  text-shadow: 1px 1px 3px white;
+  bottom: 0px;
+margin-top: 130px;
+}
 
 .layoutTestYellow{
   /* background-color: yellow; */
   background-color: #f0f0f0;
   width: 100%;
   height: 100vh;
-  padding: 80px;
+  padding-left: 80px;
+  padding-right: 80px;
+  padding-top: 20px;
   /* padding-top: 50px;
   margin-bottom: 50px;  */
 }
