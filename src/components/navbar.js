@@ -4,7 +4,7 @@ export default class Navbar extends Component {
     render() {
         return (
             <nav className="navbar navbar-dark bg-dark justify-content-between navbar-expand-lg">
-                <Link to="/" className="navbar-brand" >        <img src={require('../assets/planeicon.png')} width="40px" alt="icon"/>  GENERIC BRAND NAME </Link>
+                <Link to="/" className="navbar-brand" >        <img src={require('../assets/planeicon.png')} width="40px" alt="icon"/>  EXPLORE CINCINNATI  </Link>
                 <div className="">
                 <ul className="navbar-nav mx-auto"> 
                         <li className="navbar-item">

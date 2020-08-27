@@ -6,23 +6,30 @@ export default class Footer extends Component {
     render() {
         return (
             <div className="layoutTestGreen footer whiteText">
+               <center class="footText"> 
+               
+               
+               <h4> Places to enjoy your stay: </h4>
+                <ul>
+                    <li>Hilton Cincinnati Netherland Plaza</li>
+                    <li>Cincinnati Marriott at RiverCenter </li>
+                    <li>
+Hyatt Regency Cincinnati</li>
 
-                <p> Hilton Cincinnati Netherland Plaza</p>
-                <p> Hotel Link </p>
-                <p> Hotel Phone Number </p>
-
-                Cincinnati Marriott at RiverCenter
-
-
-
-
-
+<li>
+Hyatt Regency Cincinnati</li>
+                   
+<li>
+Hyatt Regency Cincinnati</li>
+                   
+<li className="yellowText">
+Book Your Flight Now!</li>
 
 
-{/*   
-            <div class="layoutTestGreen footer">
-            
-            <Link></Link> */}
+
+                </ul> 
+</center>
+               
             </div>
         )
     }
