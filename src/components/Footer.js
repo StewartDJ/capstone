@@ -19,7 +19,10 @@ export default class Footer extends Component {
 
 
 
-  
+{/*   
+            <div class="layoutTestGreen footer">
+            
+            <Link></Link> */}
             </div>
         )
     }

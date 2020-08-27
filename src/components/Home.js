@@ -7,14 +7,6 @@ export default class Home extends Component {
            
 <div className="layoutTestYellow pageBody">
 <div className="layoutTestBlue left pageBody">
-{/* <marquee behavior="scroll" direction="left" scrolldelay="800" scrollamount="100">
-<img src={require('../assets/tourist2.jpg')} width="150" alt="Cup of tea anyone?"/>
-<img src={require('../assets/tourist3.jpg')} width="150"  alt="Cup of tea anyone?"/>
-<img src={require('../assets/tourist2.jpg')} width="150"  alt="Cup of tea anyone?"/>
-<img src={require('../assets/tourist3.jpg')} width="150" alt="Cup of tea anyone?"/>
-</marquee> */}
-
-
 
 
 <div id="carouselExampleSlidesOnly" className="carousel slide" data-ride="carousel">
@@ -27,6 +19,8 @@ export default class Home extends Component {
     </div>
     <div className="carousel-item">
       <img className="d-block"src={require('../assets/tourists4.jpg')} alt="Third slide"/>
+
+
     </div>
   </div>
 </div> 

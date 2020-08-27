@@ -8,8 +8,6 @@ import Home from "./components/Home";
 import Footer from "./components/Footer";
 import contacts from "./components/contacts";
 import './style.css';
-
-
 function App() {
   return (
     <BrowserRouter>
@@ -20,6 +18,7 @@ function App() {
     <Route path='/allLocations' component={allLocations} />
     <Route path='/contacts' component={contacts} />
     </Switch>
+      <header className="App-header">
 
 
         <div id="bannerWrapper">
@@ -28,13 +27,12 @@ function App() {
         <img src={require('./assets/skyline.jpg')} alt="banner"/>
 
         </div>
-     
-     
+        
+      </header>
+      </div>
       <Home />
       <Footer />
-      </div>
       </BrowserRouter>
-
   )
 }
 export default App;
