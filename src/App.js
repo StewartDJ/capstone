@@ -18,19 +18,20 @@ function App() {
     <Route path='/allLocations' component={allLocations} />
     <Route path='/contacts' component={contacts} />
     </Switch>
+    {/* <Footer/> */}
+      <header className="App-header">
 
 
         <div id="bannerWrapper">
         <p className="bannerText">Welcome to Cincinnati</p>
         <img src={require('./banner.jpg')} alt=""/>
         </div>
-     
-     
+        
+      </header>
+      </div>
       <Home />
       <Footer />
-      </div>
       </BrowserRouter>
-
   )
 }
 export default App;
