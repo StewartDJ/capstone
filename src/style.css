@@ -1,3 +1,10 @@
+.navbar {
+  /* background-color: #249a9c !important; */
+    background-color: brown !important;
+    box-shadow: 10px 10px 10px black !important;
+  
+
+}
 
 
 #bannerWrapper{
@@ -37,6 +44,7 @@
 
 .layoutTestYellow{
   /* background-color: yellow; */
+  background-color: #e6ebf4;
   width: 100%;
   height: 60vh;
   padding: 20px;
@@ -44,18 +52,28 @@
 
 
 .layoutTestGreen{
+  /* background-color: #3679a0; */
   background-color: black;
-  border-top: 3px solid purple;
+  border-top: 3px solid black;
   width: 100%;
-  height: 50vh;
+  height: 20vh;
 }
 
 
 .layoutTestBlue{
-  background-color: blue;
- padding-right: 20px;
+  /* background-color: blue; */
+ /* padding-right: 20px; */
   float: left;
   width: 34%;
+  height: 56vh;
+  overflow: hidden;
+}
+
+.layoutTestBlue img{
+  /* background-color: blue; */
+ /* padding-right: 20px; */
+  float: left;
+
   height: 56vh;
   overflow: hidden;
 }
@@ -91,6 +109,7 @@
 .pageContain {
   height:100vh;
   overflow-y: hidden;
+/* overflow-y: auto; */
 }
 
 
@@ -112,34 +131,10 @@
   font-weight: bold;
   text-shadow: 1px 1px 5px black;
 } 
-/* 
-.slide-show-render-full .slide-image {
-  height: 56vh;
-    max-height: 56vh;
-  width: 34%;
+.footer{
+  padding: 20px;
+}
 
-  }
-  
-  .slide-show-render-full .slide-content {
-    height: 56vh;  
-    width: 34%;
-  }
-  
-  .slide-show-render .slides {
-    width: 34%;
-  }
-  
-  .slide-show-render.slide-show {
-    height: 56vh; 
-     margin: 0 0 20px -60px;
-  }
-  
-  .slide-show {
-    width: 34%;
-  } */
-
-
-.carousel-item .carousel-inner{
-  height: 56vh;  
-  width: 34%;
+.whiteText {
+  color: white;
 }
