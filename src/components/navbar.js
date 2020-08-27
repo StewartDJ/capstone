@@ -4,7 +4,7 @@ export default class Navbar extends Component {
     render() {
         return (
             <nav className="navbar navbar-dark bg-dark justify-content-between navbar-expand-lg">
-                <Link to="/" className="navbar-brand" >TravelSpot</Link>
+                <Link to="/" className="navbar-brand" >        <img src={require('../assets/planeicon.png')} width="40px" alt="icon"/>  GENERIC BRAND NAME </Link>
                 <div className="">
                 <ul className="navbar-nav mx-auto"> 
                         <li className="navbar-item">
@@ -23,7 +23,7 @@ export default class Navbar extends Component {
 </div>
                 <form className="form-inline">
                   <input className="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" />
-                  <button className="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                  <button className="btn btn-danger" type="submit">Search</button>
                 </form>
                 </nav>
         )
