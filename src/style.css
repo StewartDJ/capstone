@@ -1,9 +1,6 @@
 .navbar {
   /* background-color: #249a9c !important; */
-    background-color: brown !important;
-    box-shadow: 10px 10px 10px black !important;
-  
-
+    background-color:  brown !important;
 }
 
 #bannerWrapper{
@@ -19,6 +16,7 @@
   top: -100px;
   height: 550px;
   overflow-y: hidden;
+  /* margin-bottom: 50px; */
   
 }
 
@@ -35,31 +33,45 @@
 .layoutTestRed{
   /* background-color: red; */
   float: left;
-  width: 66%;
+  width: 56%;
   height: 56vh;
   overflow-wrap: normal;
   overflow:hidden;
 
 }
 
+.divider {
+  background-color: brown;
+  width: 100%;
+  height: 20vh;
+  float: left;
+ 
+}
+
 
 .layoutTestYellow{
   /* background-color: yellow; */
-  background-color: #e6ebf4;
+  background-color: #f0f0f0;
   width: 100%;
-  height: 60vh;
-  padding: 20px;
+  height: 100vh;
+  padding: 80px;
   /* padding-top: 50px;
-  margin-bottom: 50px; */
+  margin-bottom: 50px;  */
 }
 
 
 .layoutTestGreen{
-  /* background-color: #3679a0; */
-  background-color: black;
-  border-top: 3px solid black;
+  background-color: #3679a0;
+  /* background-color: rgb(161, 150, 150); */
+  /* border-top: 3px solid black; */
   width: 100%;
-  height: 20vh;
+  height: 35vh;
+  background-image: url('./assets/skybottom.png');
+  background-size: cover;
+  background-blend-mode: multiply;
+  border-top: 2px dashed white;
+  margin-top: 20px;
+  float: left;
 }
 
 
@@ -67,7 +79,7 @@
   /* background-color: blue; */
  /* padding-right: 20px; */
   float: left;
-  width: 34%;
+  width: 44%;
   height: 56vh;
   overflow: hidden;
 }
@@ -135,4 +147,9 @@
 
 .whiteText {
   color: white;
+}
+
+.blurb{
+  float: left;
+  margin-bottom: 20px;
 }
