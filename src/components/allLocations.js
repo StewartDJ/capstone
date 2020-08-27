@@ -1,11 +1,7 @@
-import React, { Component } from 'react'
+import React from 'react';
 
-export default class allLocations extends Component {
-    render() {
-        return (
-            <div>
-                
-            </div>
-        )
-    }
+export default function allLocations() {
+    return (
+        <div>map here</div>
+    )
 }
