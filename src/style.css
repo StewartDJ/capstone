@@ -16,7 +16,8 @@
 #bannerWrapper img{
   object-fit: cover;
   width: 100%;
-  height: 250px;
+  top: -100px;
+  height: 550px;
   overflow-y: hidden;
   
 }
