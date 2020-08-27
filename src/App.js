@@ -7,6 +7,7 @@ import allLocations from "./components/allLocations";
 import Home from "./components/Home";
 import Footer from "./components/Footer";
 import contacts from "./components/contacts";
+
 import './style.css';
 function App() {
   return (
