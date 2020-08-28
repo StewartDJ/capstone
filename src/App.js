@@ -7,7 +7,6 @@ import allLocations from "./components/allLocations";
 import Home from "./components/Home";
 import Footer from "./components/Footer";
 import contacts from "./components/contacts";
-import { Carousel } from 'react-bootstrap';
 
 import './style.css';
 function App() {
@@ -16,6 +15,7 @@ function App() {
     <div className="pageContain">
     <Navbar />
     <Switch>
+    <Route exact path='/' component={Home} />
     <Route path='/addLocations' component={addLocations} />
     <Route path='/allLocations' component={allLocations} />
     <Route path='/contacts' component={contacts} />
@@ -23,7 +23,6 @@ function App() {
 
       
       </div>
-      <Home />
       <Footer />
       </BrowserRouter>
 
