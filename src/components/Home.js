@@ -1,36 +1,38 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 import "bootstrap/dist/css/bootstrap.min.css"
-// import BootstrapCarousel from '../BootstrapCarousel'
-// import imageDisplayHome from "./imageDisplayHome";
+import Banner from "./banner"
 
 export default class Home extends Component {
     render() {
         return (
+<div>
+<Banner />
            
 <div className="layoutTestYellow pageBody">
-  <h1><center> LOTS TO DO AND SEE IN CINCINNATI </center></h1>
+<center>
+  <h1 className="styleOfHeaderHome"> LOTS TO DO AND SEE IN CINCINNATI </h1>
 <p> Choose from one of the following categories to see more info about any given location, or check out our "All Locations" tab to browse user created favorite tourist destinations to see around Cincinatti.</p>
-
-  <div className="layoutTestBlue left pageBody">
-
-
-<div id="carouselExampleSlidesOnly" className="carousel slide" data-ride="carousel">
-  <div className="carousel-inner">
-    <div className="carousel-item active">
-      <img className="d-block" src={require('../assets/tourist2.jpg')} alt="First slide"/>
-    </div>
-    <div className="carousel-item">
-      <img className="d-block" src={require('../assets/tourist3.jpg')} alt="Second slide"/>
-    </div>
-    <div className="carousel-item">
-      <img className="d-block"src={require('../assets/tourists4.jpg')} alt="Third slide"/>
+</center>
 
 
-    </div>
-  </div>
+<div className="layoutTestBlue left pageBody">
+
+  <div id="carouselExampleSlidesOnly" className="carousel slide" data-ride="carousel">
   
-</div>  
+    <div className="carousel-inner">
+       <div className="carousel-item active">
+           <img className="d-block" src={require('../assets/tourist2.jpg')} alt="First slide"/>
+       </div>
+       <div className="carousel-item">
+           <img className="d-block" src={require('../assets/tourist3.jpg')} alt="Second slide"/>
+       </div>
+       <div className="carousel-item">
+           <img className="d-block"src={require('../assets/tourists4.jpg')} alt="Third slide"/>
+       </div>
+    </div>
+   </div>  
+
 </div>
 
 <div className="layoutTestRed right pageBody">
@@ -74,7 +76,7 @@ export default class Home extends Component {
 </div>
 
 </div> 
-<h2> THE CITY OF CINCINNATI</h2> 
+<h2 className="underline"> THE CITY OF CINCINNATI</h2> 
 <p className="blurb">    Cincinnati (/ˌsɪnsɪˈnæti/ SIN-sih-NAT-ee) is a major city in the U.S. state of Ohio and the government seat of Hamilton County.[11] Settled in 1788, the city is located at the northern side of the confluence of the Licking and Ohio rivers, the latter of which marks the state line with Kentucky. The city is the economic and cultural hub of the Cincinnati metropolitan area, the fastest growing economic power in the Midwestern United States based on increase of economic output,[12] which had a population of 2,190,209 as of the 2018 census estimates. This makes it Ohio's largest metropolitan area and the nation's 29th-largest.[13] With a city population estimated at 303,940, Cincinnati is the third-largest city in Ohio and 64th in the United States. Cincinnati is within a day's drive of 49.70% of the United States populace, ranking it as fourth in the list of metro areas with the largest population base within one day's drive time.[14]
 
 In the 19th century, Cincinnati was an American boomtown in the middle of the country. Throughout much of the 19th century, it was listed among the top 10 U.S. cities by population, surpassed only by New Orleans and the older, established settlements of the United States eastern seaboard, as well as being the sixth-biggest city for a period spanning 1840 until 1860. Cincinnati was the first city founded after the American Revolution, as well as the first major inland city in the country.
@@ -85,6 +87,8 @@ Cincinnati is home to three major sports teams: the Cincinnati Reds of Major Lea
 </p>
 </div>
 
+
+</div>
         )
     }
 }

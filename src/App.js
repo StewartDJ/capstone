@@ -19,17 +19,7 @@ function App() {
     <Route path='/allLocations' component={allLocations} />
     <Route path='/contacts' component={contacts} />
     </Switch>
-      <header className="App-header">
-
-
-        <div id="bannerWrapper">
-        <p className="bannerText">Welcome to Cincinnati</p>
-        {/* <img src={require('./banner.jpg')} alt="banner"/> */}
-        <img src={require('./assets/sky.jpg')} alt="banner"/>
-
-        </div>
-        
-      </header>
+      
       </div>
       <Home />
       <Footer />

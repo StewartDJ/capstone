@@ -52,10 +52,30 @@ html {
  
 }
 
+#icon {
+  padding-right: 5px;
+}
+
 ul li {
   list-style: none;
  
 }
+
+.styleOfHeaderHome
+{
+  border-bottom: 5px solid brown;
+  padding: 10px;
+  margin-bottom: 20px;
+  width: 50vw;
+}
+
+.underline  {
+  border-bottom: 5px solid brown;
+  padding: 10px;
+  margin-bottom: 20px;
+  width: 20vw;
+}
+
 
 .yellowText {
   color: yellow;

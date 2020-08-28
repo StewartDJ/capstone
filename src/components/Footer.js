@@ -11,19 +11,14 @@ export default class Footer extends Component {
                
                <h4> Places to enjoy your stay: </h4>
                 <ul>
-                    <li>Hilton Cincinnati Netherland Plaza</li>
-                    <li>Cincinnati Marriott at RiverCenter </li>
-                    <li>
-Hyatt Regency Cincinnati</li>
-
-<li>
-Hyatt Regency Cincinnati</li>
+                    <li><a href="" >Hilton Cincinnati Netherland Plaza</a></li>
+                    <li><a href="" >Cincinnati Marriott at RiverCenter </a> </li>
+                    <li> <a href="https://www.hyatt.com/en-US/hotel/ohio/hyatt-regency-cincinnati/cinci?src=corp_lclb_gmb_seo_nam_cinci">
+Hyatt Regency Cincinnati</a></li> 
+<br />
                    
-<li>
-Hyatt Regency Cincinnati</li>
-                   
-<li className="yellowText">
-Book Your Flight Now!</li>
+<li className="yellowText"><a href="https://www.cvgairport.com/" >
+Book Your Flight Now!</a></li>
 
 
 
