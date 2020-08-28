@@ -1,24 +1,40 @@
+import React, { Component } from 'react';
+import { Carousel } from 'react-bootstrap';
 
-// import React, { Component } from 'react'  
-// import Carousel from 'react-bootstrap/Carousel'  
 
-// export class BootstrapCarousel extends Component {  
-
-//         render() {  
-
+export default class Navbar extends Component {
+    render() {
+        return (
+            <div>
+<Carousel>
+  <Carousel.Item>
+    <img
+      className="d-block"
+      src={require("./assets/tourist3.jpg")}
+            alt="First slide"
+    />
   
+  </Carousel.Item>
+  <Carousel.Item>
+    <img
+      className="d-block"
+      src={require("./assets/Tourist1.jpg")}
+      alt="Third slide"
+    />
 
-//                 return (  
+   
+  </Carousel.Item>
+  <Carousel.Item>
+    <img
+      className="d-block"
+      src={require("./assets/tourist2.jpg")}
+      alt="Third slide"
+    />
 
-//                         <div className="layoutTestBlue">  
+  </Carousel.Item>
+</Carousel>
 
-
-//                         </div>  
-
-//                 )  
-
-//         }  
-
-// }  
-
-// export default BootstrapCarousel  
+</div>
+        )
+    }
+}

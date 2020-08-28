@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 import "bootstrap/dist/css/bootstrap.min.css"
 import Banner from "./banner"
+import BootstrapCarousel from "../BootstrapCarousel"
 
 export default class Home extends Component {
     render() {
@@ -10,52 +11,14 @@ export default class Home extends Component {
 <Banner />
            
 <div className="layoutTestYellow pageBody">
-<<<<<<< HEAD
 <center>
   <h1 className="styleOfHeaderHome"> LOTS TO DO AND SEE IN CINCINNATI </h1>
 <p> Choose from one of the following categories to see more info about any given location, or check out our "All Locations" tab to browse user created favorite tourist destinations to see around Cincinatti.</p>
 </center>
 
-=======
-
-  {/* this is the change for the homepage that I Lashy have done */}
-  
-<header className="App-header">
-
-
-<div id="bannerWrapper">
-<p className="bannerText">Welcome to Cincinnati</p>
-{/* <img src={require('./banner.jpg')} alt="banner"/> */}
-{/* <img src={require('./assets/sky.jpg')} alt="banner"/> */}
-<img src={require('../assets/sky.jpg')} alt="banner" />
-
-</div>
-
-</header>
-
-{/* change end */}
-
-  {/* <div className="divider"> </div> */}
-  <h1><center> LOTS TO DO AND SEE IN CINCINNATI yada yada </center></h1>
-<div className="layoutTestBlue left pageBody">
->>>>>>> 336cdf9d1f0529c1bf2e5bfeba87ca0dc8146808
 
 <div className="layoutTestBlue left pageBody">
-
-  <div id="carouselExampleSlidesOnly" className="carousel slide" data-ride="carousel">
-  
-    <div className="carousel-inner">
-       <div className="carousel-item active">
-           <img className="d-block" src={require('../assets/tourist2.jpg')} alt="First slide"/>
-       </div>
-       <div className="carousel-item">
-           <img className="d-block" src={require('../assets/tourist3.jpg')} alt="Second slide"/>
-       </div>
-       <div className="carousel-item">
-           <img className="d-block"src={require('../assets/tourists4.jpg')} alt="Third slide"/>
-       </div>
-    </div>
-   </div>  
+<BootstrapCarousel />
 
 </div>
 
@@ -109,11 +72,10 @@ Cincinnati developed with fewer immigrants and less influence from Europe than E
 
 Cincinnati is home to three major sports teams: the Cincinnati Reds of Major League Baseball; the Cincinnati Bengals of the National Football League; and FC Cincinnati of Major League Soccer. The city's largest institution of higher education, the University of Cincinnati, was founded in 1819 as a municipal college and is now ranked as one of the 50 largest in the United States.[15] Cincinnati is home to historic architecture with many structures in the urban core having remained intact for 200 years. In the late 1800s, Cincinnati was commonly referred to as the "Paris of America", due mainly to such ambitious architectural projects as the Music Hall, Cincinnatian Hotel, and Shillito Department Store.[16] Cincinnati is the birthplace of William Howard Taft, the 27th President of the United States.
 </p>
+</div>
 
 </div>
 
-
-</div>
         )
     }
 }
