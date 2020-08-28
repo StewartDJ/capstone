@@ -1,11 +1,20 @@
 import React, { Component } from 'react'
 import "bootstrap/dist/css/bootstrap.min.css"
+// import { BrowserRouter, Route, Switch } from "react-router-dom";
 import Banner from "./banner"
 import BootstrapCarousel from "../BootstrapCarousel"
+// import Art from "./categoryArt"
+// import Skate from "./categorySkate"
+// import Play from "./categoryPlay"
+// import Shop from "./categoryShop"
+// import View from "./categoryView"
+// import Learn from "./categoryLearn"
+// import viewSquares from './viewSquares';
 
 export default class Home extends Component {
     render() {
         return (
+            
 <div>
 <Banner />
            
@@ -19,47 +28,74 @@ export default class Home extends Component {
 <div className="layoutHomeLeft">
 <BootstrapCarousel />
 
+{/* <BrowserRouter> */}
+
+{/* <Switch>
+    <Route exact path='/' component={BootstrapCarousel} />
+    <Route path='/categoryArt' component={Art} />
+    <Route path='/categorySkate' component={Skate} />
+    <Route path='/categoryPlay' component={Play} />
+    <Route path='/catergoryShop' component={Shop} />
+    <Route path='/categoryPlay' component={View} />
+    <Route path='/categoryLearn' component={Learn} />
+
+</Switch>
+</BrowserRouter> */}
+
+
+{/* <Art /> */}
+{/* <Skate /> */}
+{/* <Play /> */}
+{/* <Shop /> */}
+{/* <View /> */}
+{/* <Learn /> */}
 </div>
 
 <div className="layoutHomeRight">
-<div className="imgWithText">
-<div className="gridElements">
-<img src={require('../assets/Union2.jpg')} alt="union"/>
-    <p className="bottom-left">VIEW</p> 
-</div>
-</div>
-<div className="imgWithText">
-<div className="gridElements">
-<img src={require('../assets/arcade.jpg')} alt="arcade"/>
-    <p className="bottom-left">PLAY</p> 
-</div>
-</div>
-<div className="imgWithText">
-<div className="gridElements">
-    <img src={require('../assets/CAC3.jpg')} alt="CAC"/>
-    <p className="bottom-left">ART</p> 
-</div>
-</div>
-<div className="imgWithText">
-<div className="gridElements">
-<img src={require('../assets/skatepark3.jpg')} alt="arcade"/>
-    <p className="bottom-left">SKATE</p> 
-</div>
-</div>
-<div className="imgWithText">
-<div className="gridElements">
-<img src={require('../assets/otherMuseum.jpg')} alt="arcade"/>
-    <p className="bottom-left">LEARN</p> 
-</div>
-</div>
-<div className="imgWithText">
-<div className="gridElements">
-<img src={require('../assets/newport1.jpg')} alt="arcade"/>
-    <p className="bottom-left">SHOP</p> 
-    
-</div>
-
-</div>
+    {/* <viewSquares /> */}
+    <div className="imgWithText">
+            <div className="gridElements">
+           
+            <img src={require('../assets/Union2.jpg')} alt="union"/> 
+            <p className="bottom-left">VIEW</p> 
+            </div>
+            </div>
+           
+           
+           
+           
+           <div className="imgWithText">
+            <div className="gridElements">
+            <img src={require('../assets/arcade.jpg')} alt="arcade"/>
+                <p className="bottom-left">PLAY</p> 
+            </div>
+            </div>
+            <div className="imgWithText">
+            <div className="gridElements">
+                <img src={require('../assets/CAC3.jpg')} alt="CAC"/>
+                <p className="bottom-left">ART</p> 
+            </div>
+            </div>
+            <div className="imgWithText">
+            <div className="gridElements">
+            <img src={require('../assets/skatepark3.jpg')} alt="arcade"/>
+                <p className="bottom-left">SKATE</p> 
+            </div>
+            </div>
+            <div className="imgWithText">
+            <div className="gridElements">
+            <img src={require('../assets/otherMuseum.jpg')} alt="arcade"/>
+                <p className="bottom-left">LEARN</p> 
+            </div>
+            </div>
+            <div className="imgWithText">
+            <div className="gridElements">
+            <img src={require('../assets/newport1.jpg')} alt="arcade"/>
+                <p className="bottom-left">SHOP</p> 
+                
+            </div>
+            
+            </div>  
 
 </div> 
 <h2 className="underline"> THE CITY OF CINCINNATI</h2> 
