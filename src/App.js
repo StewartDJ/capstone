@@ -20,12 +20,13 @@ function App() {
     <Route path='/allLocations' component={allLocations} />
     <Route path='/contacts' component={contacts} />
     </Switch>
-     
 
-      <Footer />
-      </div>
       
+      </div>
+      <Footer />
       </BrowserRouter>
+
+      
   )
 }
 export default App;
