@@ -9,6 +9,14 @@ import Footer from "./components/Footer";
 import contacts from "./components/contacts";
 
 import './style.css';
+var requirejs = require('requirejs');
+requirejs.config({
+  nodeRequire: require
+})
+
+
+
+
 function App() {
   return (
     <BrowserRouter>

@@ -66,10 +66,30 @@ ul li {
 }
 
 .underline  {
-  border-bottom: 5px solid brown;
-  padding: 10px;
-  margin-bottom: 20px;
-  width: 20vw;
+  position: relative;
+  /* border-bottom: 5px solid brown; */
+   /* padding: 10px; */
+  
+}
+ .underline:hover {
+  /* border-bottom: 5px solid brown; */
+}  
+.underline::before{
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 5px;
+  bottom: 0;
+  left: 0;
+  background-color: brown;
+  visibility: hidden;
+  transform: scaleX(0);
+  transition: all 1s ease-in-out 0s;
+}
+
+.underline:hover::before{
+  visibility: visible;
+  transform: scaleX(1);
 }
 
 
@@ -193,6 +213,7 @@ a:visited {
 a:hover {
   text-decoration: none;
   color: brown;
+  
 }
 
 a:active {

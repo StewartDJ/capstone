@@ -108,7 +108,7 @@ export default class addLocations extends Component {
     
     return (
         <div className="container">
-            <h3>Add your own Destination!</h3>
+            <h3 className="underline">Add your own Destination!</h3>
 <form onSubmit={this.onSubmit}>
 <div className="form-group">
       <label>Destination Name</label>
