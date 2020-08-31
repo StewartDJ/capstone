@@ -34,6 +34,7 @@ export default class addLocations extends Component {
                     familyFriendly:[]
                   }
                 
+                  
                 }
                 ToggleButtonGroup() {
                   // const [value, setValue] = useState([1, 0]);
@@ -97,7 +98,9 @@ export default class addLocations extends Component {
                 }
                 console.log(newLocation)
 
-                axios.post('http://')
+                axios.post('http://localhost:5000/addLocations/add', newLocation)
+                .then((res) => {console.log(res.data)})
+                  window.location = '/'
               }
              
           

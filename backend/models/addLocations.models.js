@@ -8,14 +8,15 @@ const addLocationsSchema = new Schema({
   website: { type: String, required: true },
   imageUrl:{type: String, required: true},
   location: {type: Object, required: true},
-  {
+  
     address: {type: String, required: true},
     city: {type: String, required: true},
     destinationState:{type: String, required: true},
     zipCode:{type:Number, required: true},
-  },},
-  indoors:{type: Boolean },    
+  
+  indoors: {type: Boolean },    
  familyFriendly:{type: Boolean }
+
 }) 
  
 
