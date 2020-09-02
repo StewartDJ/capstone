@@ -15,6 +15,10 @@ import categoryLearn from './components/categoryLearn';
 import categorySkate from './components/categorySkate';
 
 import './style.css';
+
+
+
+
 function App() {
   return (
     <BrowserRouter>

@@ -20,8 +20,8 @@ export default class Home extends Component {
            
 <div className="layoutPageBody">
 <center>
-  <h1 className="styleOfHeaderHome"> LOTS TO DO AND SEE IN CINCINNATI </h1>
-<p> Choose from one of the following categories to see more info about any given location, or check out our "All Locations" tab to browse user created favorite tourist destinations to see around Cincinatti.</p>
+  <h1 className="styleOfHeaderHome underline"> LOTS TO DO AND SEE IN CINCINNATI </h1>
+<p className="container-sm"> Choose from one of the following categories to see more info about any given location, or check out our "All Locations" tab to browse user created favorite tourist destinations to see around Cincinnati. Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure nobis, voluptatibus reprehenderit aut numquam repudiandae suscipit beatae distinctio quia quidem? Delectus voluptatibus quisquam facere unde nobis, alias in reprehenderit doloremque accusamus atque voluptate minus dolorum molestias itaque velit sint. Aspernatur veniam nostrum iure esse, dolorem accusamus modi necessitatibus ab, error corrupti nam quos porro impedit id? Doloremque dolorem ipsum et! Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore, eos. Rerum enim ipsa veniam esse totam, voluptas, alias animi molestiae perspiciatis iste repellendus cum ea commodi nam sint distinctio. Eveniet assumenda reprehenderit placeat dolore excepturi odit, ullam at error consequatur neque illum aliquam impedit repellendus. Beatae voluptates iusto debitis minus repellat quidem iure nesciunt, ratione ex ad consequuntur tempore ipsam sequi eligendi voluptatem, id perferendis veritatis laudantium exercitationem, itaque odio. Alias voluptatem earum, atque in soluta harum architecto sapiente impedit!</p>
 </center>
 
 

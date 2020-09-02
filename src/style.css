@@ -1,9 +1,9 @@
-html {
+/* html {
   background-color: #f0f0f0;
-}
+} */
 
 .navbar {
-  background-color:  brown !important;
+  /* background-color:  brown !important; */
 }
 
 #bannerWrapper{
@@ -59,17 +59,40 @@ ul li {
 
 .styleOfHeaderHome
 {
-  border-bottom: 5px solid brown;
+  /* border-bottom: 5px solid brown; */
   padding: 10px;
   margin-bottom: 20px;
   width: 50vw;
 }
 
 .underline  {
-  border-bottom: 5px solid brown;
-  padding: 10px;
-  margin-bottom: 20px;
-  width: 20vw;
+  position: relative;
+  /* border-bottom: 5px solid brown; */
+   /* padding: 10px; */
+   
+  
+}
+ /* .underline:hover {
+  /* border-bottom: 5px solid brown; */   
+.underline::before{
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 5px;
+  bottom: 0;
+  left: 0;
+  /* background-color: brown; */
+  background-color: hsl(199, 85%, 63%);
+  visibility: hidden;
+  transform: scaleX(0);
+  transition: all 0.8s ease-in-out 0s;
+  /* margin-top: 20px; */
+  margin-bottom: -20px;
+}
+
+.underline:hover::before{
+  visibility: visible;
+  transform: scaleX(1);
 }
 
 
@@ -88,28 +111,31 @@ h2 {
 .footText {
   text-shadow: 1px 1px 3px white;
   bottom: 0px;
-  margin-top: 130px;
+  margin-top: 80px;
 }
 
 .layoutPageBody{
-  background-color: #f0f0f0;
+  background-color: #f0f0f0; 
   width: 100%;
   height: 100vh;
   padding-left: 80px;
   padding-right: 80px;
   padding-top: 20px;
 }
-
+html{
+  background: white;
+}
 .layoutFooter{
-  background-color: #3679a0;
+  background-color: hsl(199, 40%, 51%);
   width: 100%;
   height: 35vh;
   background-image: url('./assets/skybottom.png');
   background-size: cover;
   background-blend-mode: multiply;
-  border-top: 2px dashed white;
-  margin-top: 20px;
+  /* border-top: 2px dashed white; */
+  margin-top: 20px; 
   float: left;
+  
 }
 
 .layoutHomeLeft{
@@ -170,6 +196,8 @@ h2 {
 
 .footer{
   padding: 20px;
+  /* flex-shrink: 0; */
+  /* position:fixed; */
 }
 
 .whiteText {
@@ -193,6 +221,7 @@ a:visited {
 a:hover {
   text-decoration: none;
   color: brown;
+  
 }
 
 a:active {
@@ -211,3 +240,53 @@ a:active {
   box-shadow: 2px 2px 10px black;
 }
 
+<<<<<<< HEAD
+=======
+.contactHeader{
+  border-bottom: 5px solid brown;
+}
+
+ .buttons{
+  background-color: hsl(199, 40%, 51%) !important;
+} 
+
+.pageHeading{
+  margin-top: 10px;
+  margin-bottom: 50px;
+}
+
+.navUnderline{
+  position: relative;
+}
+
+.navUnderline::before{
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 5px;
+  bottom: 0;
+  left: 0;
+  /* background-color: brown; */
+  background-color: white;
+  visibility: hidden;
+  transform: scaleX(0);
+  transition: all 0.1s ease-in-out 0s;
+  color: white !important;
+  /* margin-top: 20px; */
+  /* margin-bottom: -20px; */
+}
+
+.navUnderline:hover::before{
+  visibility: visible;
+  transform: scaleX(1);
+}
+
+ /* .line{
+  border-left: 5px solid  hsl(199, 40%, 51%);
+  height: 30px;
+  display: flex;
+  justify-content: space-between;
+    } */
+  
+
+>>>>>>> 96652a386765285b6e1233f99ba6d60c9476fd04
