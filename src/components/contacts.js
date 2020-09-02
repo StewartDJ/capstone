@@ -16,34 +16,45 @@ export default class contacts extends Component {
         name: "",
         email: "",
         phoneNumber: "",
+        message: "",
         date: new Date()
        }
       }
       onChangeName(e){
         this.setState({
-          username: e.target.value
+          name: e.target.value
         })
       }
       onChangeEmail(e){
         this.setState({
-          username: e.target.value
+          email: e.target.value
         })
       }
       onChangePhoneNumber(e){
         this.setState({
-          username: e.target.value
+          phoneNumber: e.target.value
         })
       }
+      onChangeMessage(e){
+        this.setState({
+          message: e.target.value
+        })
+      }
+
+
       onChangeDate(date){
         this.setState(
           {date: date}
         )
-      } onSubmit(e){
+      } 
+      
+      onSubmit(e){
         e.preventDefault();
         const contactInfo ={
           name: this.state.name  ,
           email: this.state.email,
-          phoneNumber: this.state.phoneNumber ,
+          phoneNumber: this.state.phoneNumber,
+          message: this.state.message,
           date: this.state.date
         }
     
@@ -64,14 +75,14 @@ export default class contacts extends Component {
             <img src={require('../assets/skyline.jpg')} alt="banner"/>
                  </div>
                  <div className="container ">
-                     <h1 className="underline"> Please fill out this brief form, if you'd like to learn more about the Queen City! </h1>
+                     <h1 className="underline pageHeading"> Please fill out this brief form, if you'd like to learn more about the Queen City! </h1>
                      <form onSubmit={this.onSubmit}>
                 <div className="form-group">
               <label> Name</label>
              <input 
              type="text"
              required
-             className='form-control'
+             className='form-control line'
              value={this.state.name}
              onChange={this.onChangeName}
             />
@@ -87,15 +98,27 @@ export default class contacts extends Component {
         />
   </div>
   <div className="form-group">
+      <label> Leave us a short message! </label>
+      
+        <input
+        type="textarea"
+        required
+        className="form-control textarea"
+            value={this.state.phoneNumber}
+            onChange={this.onChangeMessage}
+            />
+  </div>
+  <div className="form-group">
       <label> PhoneNumber </label>
         <input
-        type="text"
+        type="textarea" name="text"
         required
         className="form-control"
             value={this.state.phoneNumber}
             onChange={this.onChangephoneNumber}
             />
   </div>
+  
              <div className="form-group">
             <label>Date:</label>
               <div>
@@ -105,9 +128,9 @@ export default class contacts extends Component {
                 />
               </div>
           </div>
-  
-          <Button variant="danger" size="lg" block type="submit">Submit!</Button>
           </form>
+          <Button variant="info" className="buttons" size="lg" block type="submit">Submit!</Button>
+          
           </div>
           
             </div>

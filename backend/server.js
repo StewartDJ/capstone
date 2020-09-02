@@ -1,14 +1,16 @@
-
+var requirejs = require('requirejs')
 const express = require('express');
 const cors = require('cors');
 const mongoose = require('mongoose');
 require('dotenv').config();
-var requirejs = require('requirejs')
 
-requirejs.config({
-    nodeRequire: require
-})
+const findMe = requirejs('find-me')
 
+console.log(findMe)
+
+
+
+ 
 
 const app = express();
 const port = process.env.PORT || 5000;

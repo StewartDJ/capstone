@@ -139,7 +139,7 @@ class allLocations extends Component {
         return (
 
             <div style={{ padding:'1rem', margin:'0 auto', maxWidth: 1000 }}>
-                <h2>Google Maps</h2>
+                <h2 className="underline">Google Maps</h2>
                 <Descriptions bordered>
     <Descriptions.Item label="City">{this.state.city}</Descriptions.Item>
     <Descriptions.Item label="Area">{this.state.area}</Descriptions.Item>

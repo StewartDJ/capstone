@@ -3,27 +3,27 @@ import { Link } from 'react-router-dom'
 export default class Navbar extends Component {
     render() {
         return (
-            <nav className="navbar navbar-dark bg-dark justify-content-between navbar-expand-lg">
-                <Link to="/" className="navbar-brand" >        <img src={require('../assets/planeicon.png')} width="40px" alt="icon" class="icon"/>  EXPLORE CINCINNATI  </Link>
+            <nav className="navbar navbar-light bg-warning justify-content-between navbar-expand-lg">
+                <Link to="/" className="navbar-brand" > <img src={require('../assets/planeicon.png')} width="40px" alt="icon" class="icon"/>  EXPLORE CINCINNATI  </Link>
                 <div className="">
                 <ul className="navbar-nav mx-auto"> 
                         <li className="navbar-item">
-                            <Link to="/" className="nav-link">Home </Link>
+                            <Link to="/" className="nav-link navUnderline">Home </Link>
                             </li>
                             <li className="navbar-item">
-                            <Link to="/allLocations" className="nav-link">All Locations </Link>
+                            <Link to="/allLocations" className="nav-link navUnderline">All Locations </Link>
                             </li>
                             <li className="navbar-item">
-                            <Link to="/addLocations" className="nav-link">Add Locations </Link>
+                            <Link to="/addLocations" className="nav-link navUnderline">Add Locations </Link>
                             </li>
                             <li className="navbar-item">
-                            <Link to="/contacts" className="nav-link">Contact </Link>
+                            <Link to="/contacts" className="nav-link navUnderline">Contact </Link>
                             </li>
                         </ul>
-</div>
+            </div>
                 <form className="form-inline">
                   <input className="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" />
-                  <button className="btn btn-danger" type="submit">Search</button>
+                  <button className="btn btn-info buttons" type="submit">Search</button>
                 </form>
                 </nav>
 
