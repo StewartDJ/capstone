@@ -1,0 +1,47 @@
+Require is not defined in Node server.js file, while running in terminal.
+
+
+I'm unable to run a node terminal on my backend server.js file in my class project. I am NOT running this in my browser, I'm trying to run my localhost through my node terminal. I've tried looking through a few articles, I made sure that requirejs was installed, babel is installed, I've tried substituting in "import" rather than require, and to my knowledge, all of the necessary files are installed in my package.json.
+
+When I run nodemon server, or node server, I get the following error message
+
+    const express = require('express');
+                    ^
+    ReferenceError: require is not defined
+
+
+
+This is the code so far.
+
+    
+    const express = require('express');
+    const cors = require('cors');
+    // const mongoose = require('mongoose');
+    const mongoose = require('mongoose')
+     require('dotenv').config();
+    
+    
+    
+    const app = express();
+    const port = process.env.PORT || 5000;
+    
+    app.use(cors());
+    app.use(express.json());
+    const uri = process.env.ATLAS_URI;
+    mongoose.connect(uri, { useNewUrlParser: true, useCreateIndex: true });const connection = mongoose.connection;connection.once('open', () => {  console.log("MongoDB database connection established successfully");})
+    const addLocationsRouter = require('./routes/addLocations.models');
+    const contactsRouter = require('./routes/contacts.models');
+    const homeRouter = require('../src/components/Home')
+    const allLocationsRouter = require('../src/components/alllocations')
+    
+    app.use('/allLocations', allLocationsRouter)
+    app.use('/Home', homeRouter);
+    app.use('/addLocations', addLocationsRouter);
+    app.use('/contacts', contactsRouter);
+    app.listen(port, () => {
+        console.log(`Server is running on port: ${port}`);
+    });
+
+I've used require in other parts files in my backend folder and it doesn't throw an error. However, in my server.js file, I seemingly can't use the word require
+
+

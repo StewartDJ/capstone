@@ -1,7 +1,11 @@
 const mongoose = require('mongoose');
-
 const Schema = mongoose.Schema;
-
+const locationSchema = new Schema({
+  address: {type: String, required: true},
+  city: {type: String, required: true},
+  destinationState:{type: String, required: true},
+  zipCode:{type:Number, required: true}
+}) 
 const addLocationsSchema = new Schema({
   Name: { type: String, required: true },
   description: {type: String, required: true},
@@ -17,6 +21,10 @@ const addLocationsSchema = new Schema({
   }); 
  
 
+  // location: {type: locationSchema, required: true},
+  // indoors:{type: Boolean },    
+  //   familyFriendly:{type: Boolean }
+  // }); 
  const TouristDestination = mongoose.model(
   "TouristDestination",
   addLocationsSchema
@@ -25,6 +33,7 @@ const addLocationsSchema = new Schema({
 module.exports = TouristDestination;
 
 
+// module.exports = TouristDestination;
 // Made some changes here - DJ
 // const addLocations = mongoose.model('addLocations', addLocationsSchema);
 // module.exports = addLocations;

@@ -33,6 +33,7 @@ export default class addLocations extends Component {
                     familyFriendly:[]
                   }
                 
+                  
                 }
                 ToggleButtonGroup() {
                   // const [value, setValue] = useState([1, 0]);
@@ -96,7 +97,9 @@ export default class addLocations extends Component {
                 }
                 console.log(newLocation)
 
-                axios.post('http://')
+                axios.post('http://localhost:5000/addLocations/add', newLocation)
+                .then((res) => {console.log(res.data)})
+                  window.location = '/'
               }
              
           
@@ -104,7 +107,7 @@ export default class addLocations extends Component {
     
     return (
         <div className="container">
-            <h3>Add your own Destination!</h3>
+            <h3 className="underline pageHeading">Add your own Destination!</h3>
 <form onSubmit={this.onSubmit}>
 <div className="form-group">
       <label>Destination Name</label>
@@ -136,7 +139,7 @@ export default class addLocations extends Component {
             onChange={this.onChangeWebsite}
             />
   </div>
-  <div className="form-group">
+  <div className="form-group ">
     <label>Image Url</label>
     <input
         type="text"
@@ -146,15 +149,18 @@ export default class addLocations extends Component {
             onChange={this.onChangeImageUrl}
             />
         </div>
-        <div className="form-group">
-                <label>Street Address</label>
+        <div className="form-group ">
+                <label  >Street Address</label>
+                <div className="line">
                 <input
                      type="text"
                      required
-                     className="form-control"
+                     className="form-control "
+                     
                       value={this.state.location.address}
                            onChange={this.onChangeAddress}
-                             />
+                           
+                             /></div>
                 <label> City </label>
                 <input
                      type="text"
@@ -186,9 +192,9 @@ export default class addLocations extends Component {
                  {/* const handleChange = (val) => setValue(val); */}
 
                     
-                <ToggleButtonGroup type="radio" name="options" className="mb-2" >
-              <ToggleButton variant="danger" value={1}>Yes</ToggleButton>
-               <ToggleButton variant="danger" value={0}>No</ToggleButton>
+                <ToggleButtonGroup type="radio" name="options" className="mb-2 buttons " >
+              <ToggleButton variant="info"className="buttons" value={1}>Yes</ToggleButton>
+               <ToggleButton variant="info" className="buttons" value={0}>No</ToggleButton>
                </ToggleButtonGroup>
                
                     </div>          
@@ -197,12 +203,12 @@ export default class addLocations extends Component {
                 <br></br>
                     
                     <ToggleButtonGroup type="radio" name="options" className="mb-2" >
-                  <ToggleButton variant="danger" value={1}>Yes</ToggleButton>
-                   <ToggleButton variant="danger" value={0}>No</ToggleButton>
+                  <ToggleButton variant="info" className="buttons" value={1}>Yes</ToggleButton>
+                   <ToggleButton variant="info" className="buttons" value={0}>No</ToggleButton>
                    </ToggleButtonGroup>
                    <br></br>
                    </div>   
-                   <Button variant="danger" size="lg" block onClick={this.onSubmit}>Submit!</Button>
+                   <Button variant="info" className="buttons" size="lg" block onClick={this.onSubmit}>Submit!</Button>
         </form>
         </div>
     )

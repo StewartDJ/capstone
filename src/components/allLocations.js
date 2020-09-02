@@ -80,6 +80,7 @@ class allLocations extends Component {
     let newLat = e.latLng.lat();
     let newLng = e.latLng.lng();
 
+    
     Geocode.fromLatLng(newLat, newLng)
         .then(response => {
             console.log('response', response)
@@ -107,6 +108,31 @@ class allLocations extends Component {
             })
 
             console.log('newLat', newLat);
+
+            // onPlaceSelected = (place) => {
+            //     const address = place.formatted_address,
+            //     addressArray =place.adress_components,
+            //     city = this.getCity(addressArray),
+            //     area = this.getArea(addressArray),
+            //     state = this.getState(addressArray),
+            //     newLat = place.geometry.location.lat(),
+            //     newLng = place.geometry.location.lng();
+            //     this.setState({
+            //         address: (address) ? address : '',
+            //         area: (area) ? area : '',
+            //         city: (city) ? city : '',
+            //         state: (state) ? state : '',
+            //         markerPosition: {
+            //             lat: newLat,
+            //             lng: newLng
+            //         },
+            //         mapPosition: {
+            //             lat: newLat,
+            //             lng: newLng
+            //         },
+            //     })
+
+            // }
    
     }
 
@@ -133,19 +159,26 @@ class allLocations extends Component {
                 </Marker>
 
             <AutoComplete
-                
-            
+                style={{ width: '100%', height: '40px', paddingLeft: 16, marginTop: 2, marginBottom: '2rem' }}
+                types={['(regions)']}
+                onPlaceSelected={ this.onPlaceSelected }
             />
 
             </GoogleMap>
           ));
+          
 
            
 
         return (
                           <div className="layoutPageBody2" style={{ padding:'1rem', margin:'0 auto', maxWidth: 1000 }}>
 
+<<<<<<< HEAD
                 <h2>Google Maps</h2>
+=======
+            <div  className='peaches' style={{ padding:'1rem', margin:'0 auto', maxWidth: 1000 }}>
+                <h2 className="google">Google Maps</h2>
+>>>>>>> 54211ddadc29787e559f2ea108dee9a6cdac1ba1
                 <Descriptions bordered>
     <Descriptions.Item label="City">{this.state.city}</Descriptions.Item>
     <Descriptions.Item label="Area">{this.state.area}</Descriptions.Item>
@@ -162,9 +195,16 @@ class allLocations extends Component {
               containerElement={<div style={{ height: `400px` }} />}
               mapElement={<div style={{ height: `100%` }} />}
             />
+<<<<<<< HEAD
 
 <LocationsList/>
 
+=======
+            <br>
+            </br>
+            <br>
+            </br>
+>>>>>>> 54211ddadc29787e559f2ea108dee9a6cdac1ba1
         </div>
         )
     }
