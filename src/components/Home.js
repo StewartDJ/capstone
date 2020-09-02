@@ -55,44 +55,65 @@ export default class Home extends Component {
     {/* <viewSquares /> */}
     <div className="imgWithText">
             <div className="gridElements">
-           
+            <a href='/categoryView'>
             <img src={require('../assets/Union2.jpg')} alt="union"/> 
-            <p className="bottom-left">VIEW</p> 
+            <p className="bottom-left">VIEW</p>
+            </a> 
             </div>
             </div>
            
-           
-           
+
            
            <div className="imgWithText">
             <div className="gridElements">
+            <a href="/categoryPlay">
             <img src={require('../assets/arcade.jpg')} alt="arcade"/>
-                <p className="bottom-left">PLAY</p> 
+                <p className="bottom-left">PLAY</p>
+            </a> 
             </div>
             </div>
+
+
+
             <div className="imgWithText">
             <div className="gridElements">
+                <a href="/categoryArt">
                 <img src={require('../assets/CAC3.jpg')} alt="CAC"/>
-                <p className="bottom-left">ART</p> 
+                <p className="bottom-left">ART</p>
+                </a> 
             </div>
             </div>
+
+
+
             <div className="imgWithText">
             <div className="gridElements">
+            <a href='/categorySkate'>
             <img src={require('../assets/skatepark3.jpg')} alt="arcade"/>
                 <p className="bottom-left">SKATE</p> 
+            </a>
             </div>
             </div>
+
+
+
             <div className="imgWithText">
             <div className="gridElements">
+            <a href='/categoryLearn'>
             <img src={require('../assets/otherMuseum.jpg')} alt="arcade"/>
                 <p className="bottom-left">LEARN</p> 
+            </a>
             </div>
             </div>
+
+
+
             <div className="imgWithText">
             <div className="gridElements">
+            <a href='/categoryShop'>
             <img src={require('../assets/newport1.jpg')} alt="arcade"/>
                 <p className="bottom-left">SHOP</p> 
-                
+            </a>
             </div>
             
             </div>  

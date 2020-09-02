@@ -7,6 +7,12 @@ import allLocations from "./components/allLocations";
 import Home from "./components/Home";
 import Footer from "./components/Footer";
 import contacts from "./components/contacts";
+import categoryArt from "./components/categoryArt";
+import categoryPlay from "./components/categoryPlay";
+import categoryView from './components/categoryView';
+import categoryShop from './components/categoryShop';
+import categoryLearn from './components/categoryLearn';
+import categorySkate from './components/categorySkate';
 
 import './style.css';
 function App() {
@@ -21,9 +27,16 @@ function App() {
     <Route path='/contacts' component={contacts} />
     </Switch>
 
-      
+    <Route path='/categoryArt' component={categoryArt} />
+    <Route path='/categoryPlay' component={categoryPlay} />
+    <Route path='/categoryView' component={categoryView} />
+    <Route path='/categoryShop' component={categoryShop} />
+    <Route path='/categoryLearn' component={categoryLearn} />
+    <Route path='/categorySkate' component={categorySkate} />
+
+    <Footer />
       </div>
-      <Footer />
+      
       </BrowserRouter>
 
       
