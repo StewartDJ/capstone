@@ -21,7 +21,6 @@ function App() {
     <Route path='/contacts' component={contacts} />
     </Switch>
 
-      
       </div>
       <Footer />
       </BrowserRouter>

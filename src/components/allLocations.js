@@ -1,4 +1,9 @@
 import React, { Component } from 'react';
+// import Locations from "./locations"
+import LocationsList from './locationsList.component'
+
+
+
 import {
     InfoWindow,
     withScriptjs,
@@ -135,10 +140,11 @@ class allLocations extends Component {
             </GoogleMap>
           ));
 
+           
 
         return (
+                          <div className="layoutPageBody2" style={{ padding:'1rem', margin:'0 auto', maxWidth: 1000 }}>
 
-            <div style={{ padding:'1rem', margin:'0 auto', maxWidth: 1000 }}>
                 <h2>Google Maps</h2>
                 <Descriptions bordered>
     <Descriptions.Item label="City">{this.state.city}</Descriptions.Item>
@@ -156,6 +162,9 @@ class allLocations extends Component {
               containerElement={<div style={{ height: `400px` }} />}
               mapElement={<div style={{ height: `100%` }} />}
             />
+
+<LocationsList/>
+
         </div>
         )
     }
