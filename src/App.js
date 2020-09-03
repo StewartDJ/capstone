@@ -31,8 +31,6 @@ function App() {
     <Route path='/contacts' component={contacts} />
     </Switch>
 
-<<<<<<< HEAD
-=======
     <Route path='/categoryArt' component={categoryArt} />
     <Route path='/categoryPlay' component={categoryPlay} />
     <Route path='/categoryView' component={categoryView} />
@@ -41,7 +39,6 @@ function App() {
     <Route path='/categorySkate' component={categorySkate} />
 
     <Footer />
->>>>>>> 54211ddadc29787e559f2ea108dee9a6cdac1ba1
       </div>
       
       </BrowserRouter>

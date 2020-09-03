@@ -6,6 +6,7 @@ import ToggleButton from 'react-bootstrap/ToggleButton'
 import ToggleButtonGroup from 'react-bootstrap/ToggleButtonGroup'
 import Button from 'react-bootstrap/button'
 
+
 export default class addLocations extends Component {
     
             constructor(props) {
@@ -19,8 +20,8 @@ export default class addLocations extends Component {
                   this.onChangeCity = this.onChangeCity.bind(this)
                   this.onChangeState = this.onChangeState.bind(this)
                   this.onChangeZipcode= this.onChangeZipcode.bind(this)
-                  this.onChangeIndoors = this.onChangeIndoors.bind(this)
-                  this.onChangeFamilyFriendly = this.onChangeFamilyFriendly.bind(this)
+                  // this.onChangeIndoors = this.onChangeIndoors.bind(this)
+                  // this.onChangeFamilyFriendly = this.onChangeFamilyFriendly.bind(this)
                   this.onSubmit = this.onSubmit.bind(this);
               
                   this.state = {
@@ -214,11 +215,3 @@ export default class addLocations extends Component {
     )
     }
   }
-  
-       
-    
-
-
-
-
-

@@ -1,9 +1,5 @@
 import React, { Component } from 'react';
-// import Locations from "./locations"
 import LocationsList from './locationsList.component'
-
-
-
 import {
     InfoWindow,
     withScriptjs,
@@ -168,17 +164,14 @@ class allLocations extends Component {
           ));
           
 
-           
 
         return (
-                          <div className="layoutPageBody2" style={{ padding:'1rem', margin:'0 auto', maxWidth: 1000 }}>
 
-<<<<<<< HEAD
-                <h2>Google Maps</h2>
-=======
             <div  className='peaches' style={{ padding:'1rem', margin:'0 auto', maxWidth: 1000 }}>
                 <h2 className="google">Google Maps</h2>
->>>>>>> 54211ddadc29787e559f2ea108dee9a6cdac1ba1
+                
+                
+
                 <Descriptions bordered>
     <Descriptions.Item label="City">{this.state.city}</Descriptions.Item>
     <Descriptions.Item label="Area">{this.state.area}</Descriptions.Item>
@@ -195,16 +188,11 @@ class allLocations extends Component {
               containerElement={<div style={{ height: `400px` }} />}
               mapElement={<div style={{ height: `100%` }} />}
             />
-<<<<<<< HEAD
-
-<LocationsList/>
-
-=======
             <br>
             </br>
             <br>
             </br>
->>>>>>> 54211ddadc29787e559f2ea108dee9a6cdac1ba1
+            <LocationsList />
         </div>
         )
     }
