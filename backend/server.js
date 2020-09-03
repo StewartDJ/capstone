@@ -12,17 +12,19 @@ const port = process.env.PORT || 5000;
 
 app.use(cors());
 app.use(express.json());
+
+
 const uri = process.env.ATLAS_URI;
 mongoose.connect(uri, { useNewUrlParser: true, useCreateIndex: true });const connection = mongoose.connection;connection.once('open', () => {  console.log("MongoDB database connection established successfully");})
-const addLocationsRouter = require('./addlocation/');
-const contactsRouter = require('./models/contacts.models');
-const homeRouter = require('../src/components/Home')
-const allLocationsRouter = require('../src/components/alllocations')
+const addLocationsRouter = require('./routes/newLocations');
+// const contactsRouter = require('./routes/contacts');
+// const homeRouter = require('../src/components/Home')
+// const allLocationsRouter = require('../src/components/alllocations')
 
-app.use('/allLocations', allLocationsRouter)
-app.use('/Home', homeRouter);
+// app.use('/allLocations', allLocationsRouter)
+// app.use('/Home', homeRouter);
 app.use('/addLocations', addLocationsRouter);
-app.use('/contacts', contactsRouter);
+// app.use('/contacts', contactsRouter);
 app.listen(port, () => {
     console.log(`Server is running on port: ${port}`);
 });

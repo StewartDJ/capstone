@@ -4,15 +4,15 @@ let location = require('../models/addLocations.model');
 
 router.route('/').get((req,res) => {
        location.find()
-        .then((addLocations) =>{res.json(addLocations)})
+        .then((newLocations) =>{res.json(newLocations)})
         .catch((err) => {
             console.log(err)
             res.status(400).json("Error:" + err)
         });
 });
 
-        router.route('/add').post((req,res) => {
-            const name = req.body.name
+               router.route('/add').post((req,res) => {
+                 const name = req.body.name
                 const description = req.body.description
                 const website = req.body.website
                 const imageUrl = req.body.imageUrl
@@ -20,7 +20,7 @@ router.route('/').get((req,res) => {
                 const city = req.body.city
                 const destinationState = req.body.destinationState
                 const zipCode = Number(req.body.zipCode)
-                const newLocation = new Location (
+                const newDestination = new location (
                     {
                         name,
                         description,
@@ -33,7 +33,7 @@ router.route('/').get((req,res) => {
                       }
                 )
 
-                newLocation
+                newDestination
                 .save()
                 .then(() => {
                     res.json('Location added!')
