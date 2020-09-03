@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import LocationsList from './locationsList.component'
 import {
     InfoWindow,
     withScriptjs,
@@ -188,6 +189,7 @@ class allLocations extends Component {
             </br>
             <br>
             </br>
+            <LocationsList />
         </div>
         )
     }

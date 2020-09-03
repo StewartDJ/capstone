@@ -8,16 +8,16 @@ export default class Navbar extends Component {
                 <div className="">
                 <ul className="navbar-nav mx-auto"> 
                         <li className="navbar-item">
-                            <Link to="/" className="nav-link navUnderline">Home </Link>
+                            <Link to="/" className="nav-link navUnderline navText">Home </Link>
                             </li>
                             <li className="navbar-item">
-                            <Link to="/allLocations" className="nav-link navUnderline">All Locations </Link>
+                            <Link to="/allLocations" className="nav-link navUnderline navText">All Locations </Link>
                             </li>
                             <li className="navbar-item">
-                            <Link to="/addLocations" className="nav-link navUnderline">Add Locations </Link>
+                            <Link to="/addLocations" className="nav-link navUnderline navText">Add Locations </Link>
                             </li>
                             <li className="navbar-item">
-                            <Link to="/contacts" className="nav-link navUnderline">Contact </Link>
+                            <Link to="/contacts" className="nav-link navUnderline navText">Contact </Link>
                             </li>
                         </ul>
             </div>

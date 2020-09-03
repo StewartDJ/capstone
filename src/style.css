@@ -1,10 +1,12 @@
 /* html {
   background-color: #f0f0f0;
 } */
+/* 
+.navText{
 
-.navbar {
-  /* background-color:  brown !important; */
-}
+} */
+
+
 
 #bannerWrapper{
   position: relative;
@@ -122,6 +124,14 @@ h2 {
   padding-right: 80px;
   padding-top: 20px;
 }
+
+.layoutPageBody2{
+  background-color: #f0f0f0;
+  width: 100vw;
+  height: 100vh;
+ 
+}
+
 html{
   background: white;
 }

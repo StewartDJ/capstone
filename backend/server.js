@@ -1,15 +1,10 @@
 const express = require('express');
 const cors = require('cors');
-const mongoose = require('mongoose');
-require('dotenv').config();
+// const mongoose = require('mongoose');
+const mongoose = require('mongoose')
+ require('dotenv').config();
 
-const findMe = requirejs('find-me')
-
-console.log(findMe)
-
-
-
- 
+console.log('please jesus')
 
 const app = express();
 const port = process.env.PORT || 5000;
@@ -17,14 +12,17 @@ const port = process.env.PORT || 5000;
 app.use(cors());
 app.use(express.json());
 const uri = process.env.ATLAS_URI;
-mongoose.connect(uri, { useNewUrlParser: true, useCreateIndex: true });const connection = mongoose.connection;connection.once('open', () => {  console.log("MongoDB database connection established successfully");})
-const addLocationsRouter = require('./routes/addLocations.models');
-const contactsRouter = require('./routes/contacts.models');
-const homeRouter = require('../src/components/Home')
-const allLocationsRouter = require('../src/components/alllocations')
+mongoose.connect(uri, { useNewUrlParser: true, useCreateIndex: true });const connection = mongoose.connection;
 
-app.use('/allLocations', allLocationsRouter)
-app.use('/Home', homeRouter);
+
+connection.once('open', () => {  console.log("MongoDB database connection established successfully");})
+const addLocationsRouter = require('./routes/newLocations/');
+const contactsRouter = require('./routes/newContacts');
+// const homeRouter = require('../src/components/Home')
+// const allLocationsRouter = require('../src/components/alllocations')
+
+// app.use('/allLocations', allLocationsRouter)
+// app.use('/Home', homeRouter);
 app.use('/addLocations', addLocationsRouter);
 app.use('/contacts', contactsRouter);
 app.listen(port, () => {
