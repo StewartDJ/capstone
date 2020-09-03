@@ -11,7 +11,7 @@ export default class Navbar extends Component {
     <img
       className="d-block"
       src={require("./assets/tourist3.jpg")}
-            alt="First slide"
+            alt="slide"
     />
   
   </Carousel.Item>
@@ -20,7 +20,7 @@ export default class Navbar extends Component {
       className="d-block"
       src={require("./assets/Tourist1.jpg")}
       width="100%"
-      alt="Third slide"
+      alt="slide"
     />
 
    
@@ -29,7 +29,7 @@ export default class Navbar extends Component {
     <img
       className="d-block"
       src={require("./assets/tourist2.jpg")}
-      alt="Third slide"
+      alt="slide"
     />
 
   </Carousel.Item>
@@ -38,7 +38,7 @@ export default class Navbar extends Component {
     <img
       className="d-block"
       src={require("./assets/tourist food.jpg")}
-      alt="Third slide"
+      alt="slide"
     />
 
   </Carousel.Item>
@@ -47,7 +47,7 @@ export default class Navbar extends Component {
     <img
       className="d-block"
       src={require("./assets/tourists4.jpg")}
-      alt="Third slide"
+      alt="slide"
     />
 
   </Carousel.Item>
@@ -58,7 +58,7 @@ export default class Navbar extends Component {
     <img
       className="d-block"
       src={require("./assets/tourists6.jpg")}
-      alt="Third slide"
+      alt="slide"
     />
 
   </Carousel.Item>

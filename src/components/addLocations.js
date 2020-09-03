@@ -215,11 +215,3 @@ export default class addLocations extends Component {
     )
     }
   }
-  
-       
-    
-
-
-
-
-
