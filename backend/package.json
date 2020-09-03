@@ -2,19 +2,12 @@
   "name": "backend",
   "version": "1.0.0",
   "description": "",
-<<<<<<< HEAD
-  "main": "index.js",
-  "scripts": {
-    "start": "node server.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
-=======
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node app.js",
     "client": "cd client && npm start",
     "dev": "concurrently -n 'server,client' -c 'red,green' \"nodemon app.js\" \"npm run client\""
->>>>>>> a1670ef4d344513eb4e783afc6a3e743ae3fe684
   },
   "keywords": [],
   "author": "",
@@ -24,13 +17,13 @@
   },
   "dependencies": {
     "axios": "^0.20.0",
-    "mongodb": "^3.6.0",
-    "morgan": "^1.10.0",
     "babel": "^6.23.0",
     "cors": "^2.8.5",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
+    "mongodb": "^3.6.0",
     "mongoose": "^5.10.2",
+    "morgan": "^1.10.0",
     "requirejs": "^2.3.6"
   }
 }

@@ -1,6 +1,6 @@
 const router = require('express').Router()
 
-const Info = require('../models/newContacts.model');
+const Info = require('../models/contacts.model');
 
 router.route('/').get((req,res) => {
        Info.find()

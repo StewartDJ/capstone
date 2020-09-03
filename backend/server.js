@@ -17,7 +17,7 @@ mongoose.connect(uri, { useNewUrlParser: true, useCreateIndex: true });const con
 
 
 connection.once('open', () => {  console.log("MongoDB database connection established successfully");})
-const addLocationsRouter = require('./routes/newLocations/');
+const addLocationsRouter = require('./routes/newLocations');
 const contactsRouter = require('./routes/newContacts');
 // const homeRouter = require('../src/components/Home')
 // const allLocationsRouter = require('../src/components/alllocations')
