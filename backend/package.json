@@ -2,12 +2,19 @@
   "name": "backend",
   "version": "1.0.0",
   "description": "",
+<<<<<<< HEAD
+  "main": "index.js",
+  "scripts": {
+    "start": "node server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+=======
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node app.js",
     "client": "cd client && npm start",
     "dev": "concurrently -n 'server,client' -c 'red,green' \"nodemon app.js\" \"npm run client\""
+>>>>>>> de5b5d41ef20370ef498a1c8efaa8c611c437e8b
   },
   "keywords": [],
   "author": "",
