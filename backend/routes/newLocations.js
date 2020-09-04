@@ -1,6 +1,6 @@
 const router = require('express').Router()
 
-let location = require('../models/addLocations.model');
+let location = require('../models/addLocations.models');
 
 router.route('/').get((req,res) => {
        location.find()
