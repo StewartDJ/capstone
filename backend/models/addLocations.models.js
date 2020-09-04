@@ -17,7 +17,7 @@ const addLocationsSchema = new Schema({
     destinationState:{type: String, required: true},
     zipCode:{type:Number, required: true},
     indoors:{type: Boolean },    
-    // familyFriendly:{type: Boolean }
+    familyFriendly:{type: Boolean }
   }); 
  
 
