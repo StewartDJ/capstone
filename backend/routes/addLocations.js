@@ -1,6 +1,6 @@
 const router = require('express').Router()
 
-let location = require('../models/addLocations.model');
+let location = require('../models/addLocations.models');
 
 router.route('/').get((req,res) => {
        location.find()
@@ -53,7 +53,16 @@ router.route('/').get((req,res) => {
                     })
                  })
 
-                
+                 router.get("/all-locations", (req, res) => {
+                    TouristDestination.find()
+                    .then((result) => {
+                      res.send(result)
+                    })
+                    .catch((err) => {
+                      console.log(err);
+                    });
+                  })
+                  
                  
         // end add more routes
 

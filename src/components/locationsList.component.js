@@ -55,10 +55,10 @@ getLocationPost() {
         <h6>INDOORS?: {destination.indoors} </h6> */}
         <br />
         <p>{destination.description}</p>
-        <a href= "{destination.website}"> visit website</a>
+          <a href= "[[[{destination.website}" target="_blank"> visit website</a>
         </div>
 </div>
-<div className="imageDiv"> <img src=  {destination.imageUrl}  /> </div>
+<div className="imageDiv"> <img src=  {destination.imageUrl} alt="location"  /> </div>
       </div>
 
       

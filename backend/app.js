@@ -1,98 +1,45 @@
-const express = require("express");
-// const morgan = require("morgan");
+var express = require('express')
+var bodyParser = require('body-parser')
 const app = express();
 const mongoose = require("mongoose");
 const TouristDestination = require("./models/addLocations.models");
+const Contact = require("./models/contacts.models");
+require('dotenv').config();
+
+var jsonParser = bodyParser.json
+var urlencodedParser = bodyParser.urlencoded({ extended: false })
+
+
+
+
 const cors = require('cors'); 
-
-
 app.use(cors()); 
 
 const dbURI =
   "mongodb+srv://capstone:12345@cluster0.gdfnt.mongodb.net/Capstone?retryWrites=true&w=majority";
-
 mongoose
   .connect(dbURI, { useNewUrlParser: true, useUnifiedTopology: true })
   .then((result) => app.listen(5000))
   .catch((err) => console.log(err));
 
-  //new toss if brokeen 
-// app.use(express.json());
-// app.use(express.urlencoded({ extended: false }));
-//new toss if brokeen 
 
-
-
-
-//This chunk of code saves to the database
-
-app.get("/add-location", (req, res) => {
-  const location = new TouristDestination({
-    name: "test addition",
-    description: 'a place',
-  website: 'somewhere',
-  imageUrl: 'dunno',
-  location: 'jlkjl',
-  address: 'address',
-  city: 'address',
-  destinationState: 'address',
-  zipCode: 789,
-  });
-  location.save()
-  .then((result) => {
-    res.send(result)
-  })
-  .catch((err) => {
-    console.log(err);
-  });
-});
-
-//this chunk of code gets from the database
-app.get("/all-locations", (req, res) => {
-  TouristDestination.find()
-  .then((result) => {
-    res.send(result)
-  })
-  .catch((err) => {
-    console.log(err);
-  });
+const connection = mongoose.connection;
+connection.once('open', () => {
+  console.log("MongoDB database connection established successfully");
 })
 
+const contactsRouter = require('./routes/contacts');
+const locationsRouter = require('./routes/addlocations');
+
+app.use('/contacts', contactsRouter);
+app.use('/all-locations', locationsRouter);
+
+//this chunk of code gets from the database
 
 
-// new trash if broken
-// app.use(morgan('tiny'));
+
 app.use('/all-locations', TouristDestination);
-// app.listen(PORT, console.log(`Server is starting at ${PORT}`));
-//new trash if broken
+app.use('/contacts', Contact);
 
 
 
-// //find a single blog
-// app.get("/single-location", (req, res) => {
-//   TouristDestination.findById(id)
-//   .then((result) => {
-//     res.send(result)
-//   })
-//   .catch((err) => {
-//     console.log(err);
-//   });
-// })
-
-// //routes, this sends to home page revise later
-// app.get('/',  (req, res) => {
-// res.redirect('/allLocations')
-// })
-
-
-// //location routes
-// app.get('/allLocations', (req, res) => {
-//   TouristDestination.find()
-//   .then((result) => {
-//     res.send(result)
-//   })
-//   .catch((err) => {
-//     console.log(err);
-//   });
-
-// })

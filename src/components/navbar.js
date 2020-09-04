@@ -1,8 +1,31 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
+// import axios from 'axios'
+import AsyncSelect from 'react-select/async';
+
 export default class Navbar extends Component {
-    render() {
+state = {
+    selectedLocations: []
+}
+
+onChange = selectedLocations => {
+    this.setState({
+        selectedLocations: selectedLocations || []
+    })
+}
+
+loadOptions=async (inputText,callback) => {
+const response = await fetch(`http://localhost:5000/all-locations?name_like=${inputText}`)
+const json = await response.json();
+
+callback(json.map( i => ({label:i.name, value: i.id})))
+} 
+
+
+
+render( ) {
         return (
+            <div>
             <nav className="navbar navbar-light bg-warning justify-content-between navbar-expand-lg">
                 <Link to="/" className="navbar-brand" > <img src={require('../assets/planeicon.png')} width="40px" alt="icon" class="icon"/>  EXPLORE CINCINNATI  </Link>
                 <div className="">
@@ -21,58 +44,29 @@ export default class Navbar extends Component {
                             </li>
                         </ul>
             </div>
+
+
                 <form className="form-inline">
-                  <input className="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" />
-                  <button className="btn btn-info buttons" type="submit">Search</button>
+                  {/* <input className="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" id="searchName"/>  */}
+                  
+                
+                  
+                  <div className='locationNames'>{this.state.selectedLocations} 
+                  </div>
+                  <AsyncSelect
+                  width = "800%"
+                  isMulti
+                  value={this.state.selectedLocations}
+                  onChange={this.onChange}
+                  placeholder={'type something'}
+                  loadOptions={this.loadOptions}
+                  />
+                  {/* <button className="btn btn-info buttons" type="submit">Search</button> */}
                 </form>
                 </nav>
-
-
-
-
-
-
-
-
-
-
+</div>
 
         )
     }
 }
 
-
-
-// const endpoint = 'insert the json within this quotes';
-
-// const name = [];
-// fetch(endpoint)
-// .then(blob => blob.json())
-// .then(data => name.push(...data))
-
-// function findMatches(wordToMatch, name) {
-//   return name.filter(place => {
-// const regex = new RegExp(wordToMatch, 'gi');
-// return place.name.match(regex) 
-// });
-// }
-
-// function displayMatches(){
-//   const matchArray = findMatches(this.value, name);
-//   const html = matchArray.map(place => {
-//     const regex = new RegExp(this.value, 'gi');
-//     const locationName = place.name.replace(regex, `<span class="hl">${this.value}</span>`);
-//     return `
-//     <li>
-//     <span class="name">${locationName}</span>
-//     </li> 
-//     `;
-//   }).join('');
-//   suggestions.innerHTML = html;
-// }
-
-// const searchInput = document.querySelector('.search');
-// const suggestions = document.querySelector('.suggestions')
-
-// searchInput.addEventListener('change', displayMatches);
-// searchInput.addEventListener('keyup', displayMatches);

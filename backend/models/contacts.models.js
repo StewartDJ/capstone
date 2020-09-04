@@ -2,17 +2,16 @@ const mongoose = require('mongoose');
 
 const Schema = mongoose.Schema;
 
-const contactsSchema = new Schema({
-  Name: { type: String, required: true },
+const contactSchema = new Schema({
+  name: { type: String, required: true },
   email: { type: String, required: true },
-  phoneNumber: { type: Number, required: true },
-  date: { type: Date, required: true },
-}, {
-  timestamps: true,
-});
+  phoneNumber: { type: String, required: true },
+  message: { type: String, required: true },
+  date: { type: Date, required: false },
+}); 
 
 
-const contacts = mongoose.model('contacts', contactsSchema);
+const Contact = mongoose.model('Contact', contactSchema);
 
 
-module.exports = contacts;
+module.exports = Contact;
