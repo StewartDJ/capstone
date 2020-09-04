@@ -1,6 +1,6 @@
 const router = require('express').Router()
 
-let location = require('../models/addLocations.model');
+let location = require('../models/addLocations.models');
 
 router.route('/').get((req,res) => {
        location.find()
@@ -12,7 +12,7 @@ router.route('/').get((req,res) => {
 });
 
                router.route('/add').post((req,res) => {
-                 const name = req.body.name
+                const name = req.body.name
                 const description = req.body.description
                 const website = req.body.website
                 const imageUrl = req.body.imageUrl
@@ -46,12 +46,12 @@ router.route('/').get((req,res) => {
 
 
         // add more routes
-                router.route('/:id').get((req,res)=>{
-                    location.findById(req.params.id)
-                    .then((location) => {res.json(location)})
-                    .catch((err) => {res.status(400).json("Error:" + err)
-                    })
-                 })
+                // router.route('/:id').get((req,res)=>{
+                //     location.findById(req.params.id)
+                //     .then((location) => {res.json(location)})
+                //     .catch((err) => {res.status(400).json("Error:" + err)
+                //     })
+                //  })
 
                 
                  

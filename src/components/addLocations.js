@@ -98,7 +98,7 @@ export default class addLocations extends Component {
                 }
                 console.log(newLocation)
 
-                axios.post('http://localhost:5000/addLocations/add', newLocation)
+                axios.post('http://localhost:5000/newLocations/add', newLocation)
                 .then((res) => {console.log(res.data)})
                   window.location = '/'
               }
@@ -209,7 +209,7 @@ export default class addLocations extends Component {
                    </ToggleButtonGroup>
                    <br></br>
                    </div>   
-                   <Button variant="info" className="buttons" size="lg" block onClick={this.onSubmit}>Submit!</Button>
+                   <Button variant="info" className="buttons" size="lg" block type="submit">Submit!</Button>
         </form>
         </div>
     )
