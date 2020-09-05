@@ -46,9 +46,9 @@ getLocationPost() {
          
          <div className= "innerContents">
            <div className="scroll">
-        <h2>{destination.name.toUpperCase() } </h2>
-      
-        <hr />
+    <div>   <h2>{destination.name} </h2> </div>
+      <div>
+        <hr /> </div>
         {/* <h6>CATEGORY [ {destination.category} ] </h6>
         <h5>CATEGORY {destination.category} </h5>
         <h6>FAMILY FRIENDLY?: {destination.familyFriendly} </h6>

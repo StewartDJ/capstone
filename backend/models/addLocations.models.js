@@ -1,15 +1,6 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
-<<<<<<< HEAD
 
-=======
-// const locationSchema = new Schema({
-//   address: {type: String, required: true},
-//   city: {type: String, required: true},
-//   destinationState:{type: String, required: true},
-//   zipCode:{type:Number, required: true}
-// }) 
->>>>>>> f6b8db5d78f6a5aecac413970f99a885253b020a
 const addLocationsSchema = new Schema({
   Name: { type: String, required: true },
   description: {type: String, required: true},
@@ -21,7 +12,7 @@ const addLocationsSchema = new Schema({
     destinationState:{type: String, required: true},
     zipCode:{type:Number, required: true},
     indoors:{type: Boolean },    
-    familyFriendly:{type: Boolean }
+    // familyFriendly:{type: Boolean }
   }); 
  
 
