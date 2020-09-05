@@ -14,7 +14,6 @@ var urlencodedParser = bodyParser.urlencoded({ extended: false })
 
 const cors = require('cors'); 
 app.use(cors()); 
-
 const dbURI =
   "mongodb+srv://capstone:12345@cluster0.gdfnt.mongodb.net/Capstone?retryWrites=true&w=majority";
 mongoose

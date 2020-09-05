@@ -2,12 +2,10 @@
   "name": "backend",
   "version": "1.0.0",
   "description": "",
-  "main": "app.js",
+  "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node app.js",
-    "client": "cd client && npm start",
-    "dev": "concurrently -n 'server,client' -c 'red,green' \"nodemon app.js\" \"npm run client\""
+    "start": "node server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "",
@@ -25,6 +23,7 @@
     "mongodb": "^3.6.0",
     "mongoose": "^5.10.2",
     "morgan": "^1.10.0",
+    "nodemon": "^2.0.4",
     "requirejs": "^2.3.6"
   }
 }
