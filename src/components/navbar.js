@@ -47,7 +47,7 @@ render( ) {
 
 
                 <form className="form-inline">
-                  {/* <input className="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" id="searchName"/>  */}
+                  <input className="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" id="searchName"/> 
                   
                 
                   
@@ -61,7 +61,7 @@ render( ) {
                   placeholder={'type something'}
                   loadOptions={this.loadOptions}
                   />
-                  {/* <button className="btn btn-info buttons" type="submit">Search</button> */}
+                  <button className="btn btn-info buttons" type="submit">Search</button>
                 </form>
                 </nav>
 </div>

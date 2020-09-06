@@ -10,18 +10,20 @@ import Button from 'react-bootstrap/button'
 export default class addLocations extends Component {
     
             constructor(props) {
-                super(props)
+                super(props);
+
                   this.onChangeName = this.onChangeName.bind(this);
                   this.onChangeDescription = this.onChangeDescription.bind(this);
                   this.onChangeWebsite = this.onChangeWebsite.bind(this);
                   this.onChangeImageUrl = this.onChangeImageUrl.bind(this)
-                  this.onChangeLocation = this.onChangeLocation.bind(this);
                   this.onChangeAddress = this.onChangeAddress.bind(this);
                   this.onChangeCity = this.onChangeCity.bind(this)
                   this.onChangeState = this.onChangeState.bind(this)
-                  this.onChangeZipcode= this.onChangeZipcode.bind(this)
-                  // this.onChangeIndoors = this.onChangeIndoors.bind(this)
-                  // this.onChangeFamilyFriendly = this.onChangeFamilyFriendly.bind(this)
+                  this.onChangeZipCode= this.onChangeZipCode.bind(this)
+                  this.onChangeIndoorsYes = this.onChangeIndoorsYes.bind(this)
+                  this.onChangeIndoorsNo = this.onChangeIndoorsNo.bind(this)
+                  this.onChangeFamilyFriendlyYes = this.onChangeFamilyFriendlyYes.bind(this)
+                  this.onChangeFamilyFriendlyNo = this.onChangeFamilyFriendlyNo.bind(this)
                   this.onSubmit = this.onSubmit.bind(this);
               
                   this.state = {
@@ -29,16 +31,42 @@ export default class addLocations extends Component {
                     description: "",
                     website: "",
                     imageUrl: "",
-                    location: { },
-                    indoors: [],
-                    familyFriendly:[]
+                    location: {
+                    address: "",
+                    city: "",
+                    state: " ",
+                    zipCode: Number,
+                  },
+                    indoors: true, 
+                    familyFriendly: true,
+                    places: []
                   }
+                }
                 
-                  
-                }
-                ToggleButtonGroup() {
-                  // const [value, setValue] = useState([1, 0]);
-                }
+            
+                componentDidMount(){
+                  this.getLocationsPost();
+                };
+                
+                getLocationsPost() {
+                    axios.get('http://localhost:5000/all-locations')
+                   .then((res) => {
+                     const data = res.data;
+                      console.log(res.data)
+                      console.log(this.state.name)
+                
+                     this.setState({places: data})
+                     console.log('data dun did got');
+                  })
+                    .catch((err) => {
+                      alert('error ABANDON SHIP!!!')
+                    });
+                  }
+
+
+        //         ToggleButtonGroup() {
+        //           // const [value, setValue] = useState([1, 0]);
+        //         }
         onChangeName(e){
         this.setState({
         name: e.target.value
@@ -59,34 +87,78 @@ export default class addLocations extends Component {
         imageUrl: e.target.value
         })}
 
-        onChangeLocation(e) {
-        this.setState({
-        location: e.target.value
+        onChangeAddress(e) {
+        this.setState ({
+          location: {
+            ...this.state.location,
+
+                address: e.target.value
+        }
         })}
-        onChangeAddress(e){
-        this.setState({
-        address: e.target.value
-        })}
+      
+
         onChangeCity(e){
         this.setState({
-        address: e.target.value
+          location: {
+            ...this.state.location,
+        city: e.target.value
+      }
         })}
+
             onChangeState(e){
                 this.setState({
+                  location: {
+                    ...this.state.location,
                     state: e.target.value
+                }
                 })
             }
-            onChangeZipcode(e){
+            onChangeZipCode(e){
                 this.setState({
-                    zipcode: e.target.value
+                  location: {
+                  ...this.state.location,
+                    zipCode: e.target.value
+                  }
                 })
             }
+
+            onChangeIndoorsYes(e){
+              console.log('Indoors')
+
+              this.setState({
+                  indoors: e.target.value
+                
+              })
+          }
+          onChangeIndoorsNo(e){
+            console.log('Outdoors')
+
+            this.setState({
+                indoors: e.target.value
+              
+            })
+        }
+                onChangeFamilyFriendlyYes(e){
+
+              this.setState({
+                  familyFriendly: e.target.value
+                
+              })
+          }
+          onChangeFamilyFriendlyNo(e){
+
+            this.setState({
+                familyFriendly: e.target.value
+              
+            })
+        }
+              
                 
             
             onSubmit(e) {
                 e.preventDefault();
                 const newLocation  = {
-                  name: this.state.username  ,
+                  name: this.state.name  ,
                   description: this.state.description,
                   website: this.state.website ,
                   imageUrl: this.state.imageUrl,
@@ -94,13 +166,16 @@ export default class addLocations extends Component {
                   address: this.state.location.address,
                   city: this.state.location.city,
                   state: this.state.location.state,
-                  zipcode:this.state.location.zipcode
+                  zipCode:this.state.location.zipCode, 
+
+                  indoors: this.state.indoors, 
+                  familyFriendly: this.state.familyFriendly
                 }
                 console.log(newLocation)
 
-                axios.post('http://localhost:5000/newLocations/add', newLocation)
+                axios.post('http://localhost:5000/all-locations/add', newLocation)
                 .then((res) => {console.log(res.data)})
-                  window.location = '/'
+                  window.location = '/allLocations'
               }
              
           
@@ -114,6 +189,7 @@ export default class addLocations extends Component {
       <label>Destination Name</label>
         <input 
           type="text"
+          maxLength="30"
           required
           className='form-control'
           value={this.state.name}
@@ -124,6 +200,7 @@ export default class addLocations extends Component {
       <label>Description</label>
         <input 
           type="text"
+          maxLength="365"
           required
           className='form-control'
           value={this.state.description}
@@ -157,11 +234,11 @@ export default class addLocations extends Component {
                      type="text"
                      required
                      className="form-control "
-                     
-                      value={this.state.location.address}
-                           onChange={this.onChangeAddress}
+                     value={this.state.location.address}
+                     onChange={this.onChangeAddress}
                            
-                             /></div>
+                        />
+                             </div>
                 <label> City </label>
                 <input
                      type="text"
@@ -173,45 +250,109 @@ export default class addLocations extends Component {
                 <label>State</label>
                 <input
                      type="text"
+                     minLength="2"
+                     maxLength="4"
                      required
                      className="form-control"
                       value={this.state.location.state}
                            onChange={this.onChangeState}
                              />
-                <label> Zipcode </label>
-                <input
-                     type="number"
-                     required
-                     className="form-control"
-                      value={this.state.location.zipcode}
-                           onChange={this.onChangeZipCode}
-                             />
-                            </div>
-                      <div className="form-group">
-                 <label>Is this an indoor destination?</label>
-                 <br></br>
-                 {/* const handleChange = (val) => setValue(val); */}
+                <label>Zipcode</label>
+              <input
+              type="text"
+              minLength="6"
+              maxLength="6"
+              className="form-control"
+              value={this.state.zipCode}
+              onChange={this.onChangeZipCode}
+              />
+<div className="form-group">
+<label>Is this an indoor destination?</label>
+<br/>
+<br/> 
 
-                    
-                <ToggleButtonGroup type="radio" name="options" className="mb-2 buttons " >
-              <ToggleButton variant="info"className="buttons" value={1}>Yes</ToggleButton>
-               <ToggleButton variant="info" className="buttons" value={0}>No</ToggleButton>
-               </ToggleButtonGroup>
-               
-                    </div>          
-                <div className="form-group">  
-                <label>Is this location family friendly?</label>
-                <br></br>
-                    
-                    <ToggleButtonGroup type="radio" name="options" className="mb-2" >
-                  <ToggleButton variant="info" className="buttons" value={1}>Yes</ToggleButton>
-                   <ToggleButton variant="info" className="buttons" value={0}>No</ToggleButton>
-                   </ToggleButtonGroup>
-                   <br></br>
-                   </div>   
-                   <Button variant="info" className="buttons" size="lg" block type="submit">Submit!</Button>
+<ToggleButtonGroup type="radio" name="options" className="mb-2 buttons " >
+
+<ToggleButton 
+variant="info"
+className="buttons form-control" 
+value={1}
+onClick={this.onChangeIndoorsYes}>
+Yes</ToggleButton>
+
+
+<ToggleButton 
+variant="info"
+ className="buttons"
+value={0}
+onClick={this.onChangeIndoorsNo}>
+No</ToggleButton>
+
+</ToggleButtonGroup>
+
+     </div>                          
+         </div>
+
+
+
+         <div className="form-group">  
+ <label>Is this location family friendly?</label>
+ <br></br>
+     
+  <ToggleButtonGroup type="radio" name="options" className="mb-2" >
+ <ToggleButton variant="info" className="buttons" value={1} onClick={this.onChangeFamilyFriendlyYes}>Yes</ToggleButton>
+    <ToggleButton variant="info" className="buttons" value={0} onClick={this.onChangeFamilyFriendlyNo}>No</ToggleButton>
+    </ToggleButtonGroup>
+    <br></br>
+    </div>   
+
+
+
+
+
+
+
+
+
+
+                            <Button variant="info" className="buttons" size="lg" block type="submit">Submit!</Button>
         </form>
         </div>
     )
     }
   }
+
+//   <div className="form-group">
+//   <label>Is this an indoor destination?</label>
+//   {/* <br></br> */}
+//   {/* const handleChange = (val) => setValue(val); */}
+
+     
+//  <ToggleButtonGroup 
+//  type="radio" 
+//  name="options" 
+//  className="mb-2 buttons " >
+
+// <ToggleButton
+// variant="info"
+// className="buttons form-control" 
+// value={1}
+// onChange={this.onChangeIndoors}>Yes
+// </ToggleButton>
+
+
+// <ToggleButton variant="info" className="buttons" value={0} onChange={this.onChangeIndoors}>No</ToggleButton>
+// </ToggleButtonGroup>
+
+//      </div>          
+//  <div className="form-group">  
+//  <label>Is this location family friendly?</label>
+//  <br></br>
+     
+//      <ToggleButtonGroup type="radio" name="options" className="mb-2" >
+//    <ToggleButton variant="info" className="buttons" value={1} onChange={this.onChangeFamilyFriendly}>Yes</ToggleButton>
+//     <ToggleButton variant="info" className="buttons" value={0} onChange={this.onChangeFamilyFriendly}>No</ToggleButton>
+//     </ToggleButtonGroup>
+//     <br></br>
+//     </div>   
+//     <Button variant="info" className="buttons" size="lg" block type="submit">Submit!</Button>

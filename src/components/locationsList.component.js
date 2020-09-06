@@ -6,9 +6,14 @@ class LocationsList extends Component {
     name: ' ',
     indoors:  Boolean,
     website: '', 
-    location: Object,
+    location: {
+      address: "",
+      city: "",
+      state: "", 
+      zipCode: Number,
+    },
     category: ' ',
-    familyFriendly: Boolean,
+    familyFriendly: "",
     description: ' ',
     imageUrl: ' ',
     locations: [] 
@@ -37,29 +42,51 @@ getLocationPost() {
     return locations.map((destination, index) => {
         return(
 
-// possibly add options to sort by family friendly, category, indoors
-
-
 
       <div key={index} className="theLocations">
          <div className="yellowEdge"></div>
          
          <div className= "innerContents">
-           <div className="scroll">
-    <div>   <h2>{destination.name} </h2> </div>
-      <div>
-        <hr /> </div>
-        {/* <h6>CATEGORY [ {destination.category} ] </h6>
-        <h5>CATEGORY {destination.category} </h5>
-        <h6>FAMILY FRIENDLY?: {destination.familyFriendly} </h6>
-        <h6>INDOORS?: {destination.indoors} </h6> */}
-        <br />
-        <p>{destination.description}</p>
-          <a href= "[[[{destination.website}" target="_blank"> visit website</a>
-        </div>
+    
+<div className="scroll">
+  <div className="grid-item"><h2>{destination.name} </h2></div>
+  
+   <div className="grid-item">     {JSON.stringify(destination.location, function (key, value) {
+   if (key == "city" || key == "state" || key == "address") {
+   return value.toUpperCase()
+    
+
+   } else {
+     return value;
+   }}
+   )}
+    
+</div> 
+<br/>
+  <div className="grid-item"> <p>{destination.description}</p> </div>
+  <div className="grid-item">  <a href= {destination.website} target="_blank" className="btn btn-warning"> VISIT WEBSITE</a> </div>
+ 
 </div>
-<div className="imageDiv"> <img src=  {destination.imageUrl} alt="location"  /> </div>
-      </div>
+
+
+
+
+
+
+
+
+
+
+
+
+      <div> 
+         </div>
+       
+        <br />
+         
+</div>
+<div className="imageDiv"> <img src=  {destination.imageUrl} alt="location"   /> </div>
+      </div> 
 
       
         )
@@ -71,7 +98,7 @@ getLocationPost() {
     return (  
       <div > 
         {this.displayLocationPosts(this.state.locations)}
-         </div>
+         </div> 
     );
   }
 }
