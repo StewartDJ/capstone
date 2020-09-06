@@ -125,7 +125,8 @@ render() {
     <div className="form-group">
          <label>Email</label>
            <input 
-            type="text"
+            type="email"
+            // pattern="/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/"
             required
             className='form-control'
             value={this.state.email}

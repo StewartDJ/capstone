@@ -181,9 +181,14 @@ export default class addLocations extends Component {
           
   render(){
     
-    return (
+    return ( 
+      <div >
+<div id="bannerWrapper">
+               <img src={require('../assets/image.jpeg')} alt="banner"/>
+                    </div>
         <div className="container">
-            <h3 className="underline pageHeading">Add your own Destination!</h3>
+
+            <h3 className="underline pageHeading">Add Your Own Destination!</h3>
 <form onSubmit={this.onSubmit}>
 <div className="form-group">
       <label>Destination Name</label>
@@ -257,7 +262,7 @@ export default class addLocations extends Component {
                       value={this.state.location.state}
                            onChange={this.onChangeState}
                              />
-                <label>Zipcode</label>
+                <label>ZIP Code</label>
               <input
               type="text"
               minLength="6"
@@ -314,10 +319,10 @@ No</ToggleButton>
 
 
 
-
                             <Button variant="info" className="buttons" size="lg" block type="submit">Submit!</Button>
         </form>
-        </div>
+        </div></div>
+
     )
     }
   }

@@ -52,7 +52,7 @@ getLocationPost() {
   <div className="grid-item"><h2>{destination.name} </h2></div>
   
    <div className="grid-item">     {JSON.stringify(destination.location, function (key, value) {
-   if (key == "city" || key == "state" || key == "address") {
+   if (key === "city" || key === "state" || key === "address") {
    return value.toUpperCase()
     
 
@@ -64,7 +64,7 @@ getLocationPost() {
 </div> 
 <br/>
   <div className="grid-item"> <p>{destination.description}</p> </div>
-  <div className="grid-item">  <a href= {destination.website} target="_blank" className="btn btn-warning"> VISIT WEBSITE</a> </div>
+  <div className="grid-item">  <a href= {destination.website} target="_blank" className="btn btn-warning" rel="noopener noreferrer"> VISIT WEBSITE</a> </div>
  
 </div>
 

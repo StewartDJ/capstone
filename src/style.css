@@ -120,6 +120,13 @@ h2 {
   padding-top: -20px;
 }
 
+.footerFix {
+ 
+background-color: red; 
+width: 100%;
+height: 20px;
+}
+
 
 .layoutPageBody{
   /* background-color: #f0f0f0;  */
@@ -216,9 +223,6 @@ background-color: rgb(54,54,54);
   /* position:fixed; */
 }
 
-.footer{
-  color: 
-}
 
 .whiteText {
   color: white;
@@ -295,6 +299,12 @@ a:active {
   
 }
 
+.container {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-left: auto;
+  margin-right: auto;
+}
 /* .theLocations h2 h5 h6 p hr{
   margin-right: 20px;
   font-weight: bold;
@@ -395,7 +405,7 @@ margin-left: 20px;
 } 
 
 .pageHeading{
-  margin-top: 10px;
+  margin-top: 20px;
   margin-bottom: 50px;
 }
 

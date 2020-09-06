@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 // import axios from 'axios'
-import AsyncSelect from 'react-select/async';
+// import AsyncSelect from 'react-select/async';
 
 export default class Navbar extends Component {
 state = {
