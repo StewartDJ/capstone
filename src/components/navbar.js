@@ -18,6 +18,7 @@ loadOptions=async (inputText,callback) => {
 const response = await fetch(`http://localhost:5000/all-locations?name_like=${inputText}`)
 const json = await response.json();
 
+
 callback(json.map( i => ({label:i.name, value: i.id})))
 } 
 
@@ -46,22 +47,31 @@ render( ) {
             </div>
 
 
-                <form className="form-inline">
-                  <input className="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" id="searchName"/> 
+                <form className="form-inline" action="https://google.com/search">
+                  <input 
+                  className="form-control mr-sm-2" 
+                  type="text"
+                  placeholder="Search Google"
+                   aria-label="Search Google"
+                   id="searchName"
+                   name="q"
+                
+
+                   /> 
                   
                 
                   
                   <div className='locationNames'>{this.state.selectedLocations} 
                   </div>
-                  <AsyncSelect
+                  {/* <AsyncSelect
                   width = "800%"
                   isMulti
                   value={this.state.selectedLocations}
                   onChange={this.onChange}
                   placeholder={'type something'}
                   loadOptions={this.loadOptions}
-                  />
-                  <button className="btn btn-info buttons" type="submit">Search</button>
+                  /> */}
+                  <button className="btn btn-info buttons" type="submit" value="Google Search">Search</button>
                 </form>
                 </nav>
 </div>
