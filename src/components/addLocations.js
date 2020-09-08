@@ -265,8 +265,8 @@ export default class addLocations extends Component {
                 <label>ZIP Code</label>
               <input
               type="text"
-              minLength="6"
-              maxLength="6"
+              minLength="5"
+              maxLength="5"
               className="form-control"
               value={this.state.zipCode}
               onChange={this.onChangeZipCode}

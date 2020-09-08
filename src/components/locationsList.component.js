@@ -51,7 +51,10 @@ getLocationPost() {
 <div className="scroll">
   <div className="grid-item"><h2>{destination.name} </h2></div>
   
-   <div className="grid-item">     {JSON.stringify(destination.location, function (key, value) {
+   <div className="grid-item">     
+   {/* {this.state.location} */}
+   
+   {JSON.stringify(destination.location, function (key, value) {
    if (key === "city" || key === "state" || key === "address") {
    return value.toUpperCase()
     
@@ -60,7 +63,7 @@ getLocationPost() {
      return value;
    }}
    )}
-    
+     
 </div> 
 <br/>
   <div className="grid-item"> <p>{destination.description}</p> </div>
