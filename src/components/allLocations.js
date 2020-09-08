@@ -166,12 +166,16 @@ class allLocations extends Component {
 
 
         return (
-            <div st>
+            <div>
+
+                <div style={{ padding: '1rem', margin:'0 auto', maxWidth: 1000 }}>
                 
-<iframe style={{ padding:'0rem', marginTop: 90, marginBottom: 90 }} width="922" height="519" src="https://www.youtube.com/embed/G8EUiH00BrU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
-            
+<iframe style={{ padding:'0rem', marginTop: 110, marginBottom: 250 }} width="960" height="560" src="https://www.youtube.com/embed/G8EUiH00BrU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
+
+                </div>
+
             <div  className='peaches' style={{ padding:'1rem', margin:'0 auto', maxWidth: 1000 }}>
-                <h2 className="google" style={{ marginLeft: 400 }}>Google Maps</h2>
+                <h2 className="google underline" style={{ marginLeft: 240, marginBottom: 50, fontSize: 70 }}>Google Maps</h2>
                 <Descriptions bordered>
     <Descriptions.Item label="City">{this.state.city}</Descriptions.Item>
     <Descriptions.Item label="Area">{this.state.area}</Descriptions.Item>
@@ -188,6 +192,19 @@ class allLocations extends Component {
               containerElement={<div style={{ height: `400px` }} />}
               mapElement={<div style={{ height: `100%` }} />}
             />
+            
+            <br>
+            </br>
+
+            <br>
+            </br>
+
+            <br>
+            </br>
+
+            <br>
+            </br>
+
             <br>
             </br>
 
