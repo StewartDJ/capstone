@@ -101,6 +101,4 @@ Cincinnati is home to three major sports teams: the Cincinnati Reds of Major Lea
 </p>
 </div>
 </div>
-        )
-    }
-}
+        )}}

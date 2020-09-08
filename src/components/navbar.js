@@ -23,9 +23,25 @@ export default class Navbar extends Component {
           alert('error ABANDON SHIP!!!')
         });
       }
+<<<<<<< HEAD
+=======
+
+    searchbar(locations) {
+      if (!locations.length) return null;
+       return locations.map((destination, index) => {
+        console.log(destination.name)
+       return <option value = {destination.name}/>
+
+      })
+
+    }
+
+>>>>>>> 76a7d6f981a5633c555e57f418f093fd071c3cb4
     render() {
         return (
             <nav className="navbar navbar-light bg-warning justify-content-between navbar-expand-lg">
+                      
+
                 <Link to="/" className="navbar-brand " > <img src={require('../assets/planeicon.png')} width="40px" alt="icon" class="icon"/>  EXPLORE CINCINNATI  </Link>
                 <div className="">
                 <ul className="navbar-nav mx-auto"> 
@@ -68,7 +84,7 @@ export default class Navbar extends Component {
                                 </UncontrolledDropdown>
                                             </ul>
             </div>
-                <form className="form-inline" method="get" action="https://google.com/search" method="get" autocomplete="on">
+                <form className="form-inline" method="get" action="https://google.com/search" autocomplete="on">
                 <input list="places" className="form-control mr-sm-2" type="text" placeholder="Search Google" aria-label="Search Google" id="searchName" name="q"/> 
 <datalist id="places">
 <option value="Hotels in Cincinnati"/>
@@ -76,6 +92,11 @@ export default class Navbar extends Component {
 <option value="Cincinnati History"/>
 <option value="Cincinnati Facts"/>
 <option value="Airports in Cincinnati"/>
+<<<<<<< HEAD
+=======
+
+{this.searchbar(this.state.locations)}
+>>>>>>> 76a7d6f981a5633c555e57f418f093fd071c3cb4
 </datalist>
                 <button className="btn btn-info buttons" type="submit" value="Google Search">Search</button>
                 </form>
@@ -83,31 +104,3 @@ export default class Navbar extends Component {
         )
     }
 }
-// const endpoint = 'insert the json within this quotes';
-// const name = [];
-// fetch(endpoint)
-// .then(blob => blob.json())
-// .then(data => name.push(...data))
-// function findMatches(wordToMatch, name) {
-//   return name.filter(place => {
-// const regex = new RegExp(wordToMatch, 'gi');
-// return place.name.match(regex) 
-// });
-// }
-// function displayMatches(){
-//   const matchArray = findMatches(this.value, name);
-//   const html = matchArray.map(place => {
-//     const regex = new RegExp(this.value, 'gi');
-//     const locationName = place.name.replace(regex, `<span class="hl">${this.value}</span>`);
-//     return `
-//     <li>
-//     <span class="name">${locationName}</span>
-//     </li> 
-//     `;
-//   }).join('');
-//   suggestions.innerHTML = html;
-// }
-// const searchInput = document.querySelector('.search');
-// const suggestions = document.querySelector('.suggestions')
-// searchInput.addEventListener('change', displayMatches);
-// searchInput.addEventListener('keyup', displayMatches);

@@ -265,6 +265,10 @@ No</ToggleButton>
     </ToggleButtonGroup>
     <br></br>
     </div>   
+<<<<<<< HEAD
+=======
+
+>>>>>>> 76a7d6f981a5633c555e57f418f093fd071c3cb4
  <Button variant="info" className="buttons" size="lg" block type="submit">Submit!</Button>
         </form>
         </div></div>
