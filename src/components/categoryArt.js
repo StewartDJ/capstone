@@ -1,7 +1,5 @@
 import React, { Component } from 'react'
 import { Carousel } from 'react-bootstrap';
-
-
 export default class Art extends Component {
     render() {
         return (
@@ -14,7 +12,6 @@ export default class Art extends Component {
                   className="d-block artCarousel"
                   src={require("../assets/artPageLarge.jpg")}
                         width="100%"
-                        
                         alt="slide"
                 />
                 </Carousel.Item>
@@ -23,7 +20,6 @@ export default class Art extends Component {
                   className="d-block artCarousel"
                   src={require("../assets/artPageLarge2.jpg")}
                         width="100%"
-                        
                         alt="slide"
                 />
                 </Carousel.Item>
@@ -32,7 +28,6 @@ export default class Art extends Component {
                   className="d-block artCarousel"
                   src={require("../assets/artPageLarge3.jpg")}
                         width="100%"
-                        
                         alt="slide"
                 />
                 </Carousel.Item>
@@ -41,7 +36,6 @@ export default class Art extends Component {
                   className="d-block artCarousel"
                   src={require("../assets/artPageLarge4.jpg")}
                         width="100%"
-                        
                         alt="slide"
                 />
                 </Carousel.Item>
@@ -50,12 +44,9 @@ export default class Art extends Component {
                   className="d-block artCarousel"
                   src={require("../assets/artPageLarge5.jpg")}
                         width="100%"
-                        
                         alt="slide"
                 />
                 </Carousel.Item>
-              
-                                                             
             </Carousel>
                     <p className="fillerText"> Cincinnati is a city bursting at the seams with artistic talent. Though there's already a wide variety of Musuems, Galleries and rotating exhibits, the streets themselves are packed with endless murals, sculptures, and graffiti! Artworks is a local organization that cultivates young artists and allows them to collaborate on enormous art instillations!<br></br> <br></br>Additionally, Cincinnati is no stranger to talent from accross the pond! Recently, we were fortunate enough to have Korean artist Chris Shim, aka Royyal Dog grace us with a beautiful mural, right in the heart of Downtown!</p> <div className="container">
                     <img src={require('../assets/artPage11.jpg')} alt="Royyal" className="royyal"/>
@@ -74,14 +65,11 @@ export default class Art extends Component {
                     <h2 className="fillerText artHeaders">Union Terminal</h2>
                          <br></br> <br></br><br></br><br></br><br></br> 
                       <a href="https://www.cincymuseum.org/">   <img src={require('../assets/Union4.jpg')} alt="CAC" className="artPageExamples"/></a><br></br>
-
                                   <br></br>
                     <h2 className="fillerText artHeaders">Khron Conservatory</h2>
                     <br></br><br></br>
                 <a href="https://www.cincinnatiparks.com/krohn/">  <img src={require('../assets/Krohn.jpg')} alt="Kc" className="artPageExamples"/></a> 
                                 <br></br>
-                    
-
                    <p className="fillerText ender"><a href="/allLocations">CLICK HERE</a> to see all of our featured tourist destinations! </p>
                    </div>
                      </div>

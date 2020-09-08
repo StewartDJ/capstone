@@ -65,24 +65,13 @@ getLocationPost() {
  
 </div>
 
-
-
-
-
-
-
-
-
-
-
-
       <div> 
          </div>
-       
-        <br />
+             <br />
          
 </div>
-<div className="imageDiv"> <img src=  {destination.imageUrl} alt="location"   /> </div>
+<div className="imageDiv">
+   <img src=  {destination.imageUrl} alt="location"   /> </div>
       </div> 
 
       
