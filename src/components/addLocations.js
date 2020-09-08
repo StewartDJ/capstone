@@ -37,19 +37,15 @@ export default class addLocations extends Component {
                     places: []
                   }
                 }
-                
-            
                 componentDidMount(){
                   this.getLocationsPost();
                 };
-                
                 getLocationsPost() {
                     axios.get('http://localhost:5000/all-locations')
                    .then((res) => {
                      const data = res.data;
                       console.log(res.data)
                       console.log(this.state.name)
-                
                      this.setState({places: data})
                      console.log('data dun did got');
                   })
@@ -57,8 +53,6 @@ export default class addLocations extends Component {
                       alert('error ABANDON SHIP!!!')
                     });
                   }
-
-
         //         ToggleButtonGroup() {
         //           // const [value, setValue] = useState([1, 0]);
         //         }
@@ -111,40 +105,28 @@ export default class addLocations extends Component {
                   }
                 })
             }
-
             onChangeIndoorsYes(e){
               console.log('Indoors')
-
               this.setState({
                   indoors: e.target.value
-                
               })
           }
           onChangeIndoorsNo(e){
             console.log('Outdoors')
-
             this.setState({
                 indoors: e.target.value
-              
             })
         }
                 onChangeFamilyFriendlyYes(e){
-
               this.setState({
                   familyFriendly: e.target.value
-                
               })
           }
           onChangeFamilyFriendlyNo(e){
-
             this.setState({
                 familyFriendly: e.target.value
-              
             })
         }
-              
-                
-            
             onSubmit(e) {
                 e.preventDefault();
                 const newLocation  = {
@@ -166,7 +148,6 @@ export default class addLocations extends Component {
                   window.location = '/allLocations'
               }
   render(){
-    
     return ( 
       <div >
 <div id="bannerWrapper">
@@ -226,7 +207,6 @@ export default class addLocations extends Component {
                      className="form-control "
                      value={this.state.location.address}
                      onChange={this.onChangeAddress}
-                           
                         />
                              </div>
                 <label> City </label>
@@ -260,35 +240,25 @@ export default class addLocations extends Component {
 <label>Is this an indoor destination?</label>
 <br/>
 <br/> 
-
 <ToggleButtonGroup type="radio" name="options" className="mb-2 buttons " >
-
 <ToggleButton 
 variant="info"
 className="buttons form-control" 
 value={1}
 onClick={this.onChangeIndoorsYes}>
 Yes</ToggleButton>
-
-
 <ToggleButton 
 variant="info"
  className="buttons"
 value={0}
 onClick={this.onChangeIndoorsNo}>
 No</ToggleButton>
-
 </ToggleButtonGroup>
-
      </div>                          
          </div>
-
-
-
          <div className="form-group">  
  <label>Is this location family friendly?</label>
  <br></br>
-     
   <ToggleButtonGroup type="radio" name="options" className="mb-2" >
  <ToggleButton variant="info" className="buttons" value={1} onClick={this.onChangeFamilyFriendlyYes}>Yes</ToggleButton>
     <ToggleButton variant="info" className="buttons" value={0} onClick={this.onChangeFamilyFriendlyNo}>No</ToggleButton>
@@ -299,7 +269,6 @@ No</ToggleButton>
  <Button variant="info" className="buttons" size="lg" block type="submit">Submit!</Button>
         </form>
         </div></div>
-
     )
     }
   }

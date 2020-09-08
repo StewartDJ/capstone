@@ -88,7 +88,7 @@ ul li {
   transform: scaleX(0);
   transition: all 0.8s ease-in-out 0s;
   /* margin-top: 20px; */
-  margin-bottom: -20px;
+  margin-bottom: -3px;
 }
 
 .underline:hover::before{
@@ -352,34 +352,8 @@ width: 50%;
   grid-row-gap: 0px;
   grid-template-columns: 95%;
 }
-
-.scroll {
-  height: 400px;
-  padding-right: 20px;
-  padding-bottom: 20px;
-overflow-y: auto;
-  width: 110%;
-}
-
-/* #grid {
-  background-color: green;
-  display: grid;
-  padding: 20px;
-  grid-column-gap: 20px;
-  grid-row-gap: 10px;
-  grid-template-columns: 200px;
+/* .scroll {
 } */
-
-.grid-item {
-overflow: hidden;
-  /* background-color: blue; */
-  padding-right: 20px;
-} 
-
-
-
-
-
 .imageDiv{
   overflow: hidden;
   margin: 0px;
