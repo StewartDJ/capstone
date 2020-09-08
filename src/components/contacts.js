@@ -4,9 +4,12 @@ import DatePicker from 'react-datepicker';
 import "react-datepicker/dist/react-datepicker.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Button from 'react-bootstrap/button';
+
+
 export default class Contacts extends Component {
   constructor(props) {
     super(props);
+
     this.onChangeName = this.onChangeName.bind(this);
     this.onChangeEmail = this.onChangeEmail.bind(this);
     this.onChangeDate = this.onChangeDate.bind(this);
@@ -22,14 +25,18 @@ this.onSubmit = this.onSubmit.bind(this)
       contactInfo: []
      }
     }
+
+
     componentDidMount(){
       this.getContactsPost();
     }
+    
     getContactsPost() {
         axios.get('http://localhost:5000/contacts')
        .then((res) => {
          const data = res.data;
           console.log(res.data)
+    
          this.setState({contactInfo: data})
          console.log('data dun did got');
       })
@@ -37,6 +44,13 @@ this.onSubmit = this.onSubmit.bind(this)
           alert('error ABANDON SHIP!!!')
         });
       }
+
+
+
+
+
+    
+
     //probably dont need
 onChangeName(e){
   this.setState({
@@ -63,8 +77,10 @@ onChangeDate(date){
     date: date
   });
 }
+
 onSubmit(e){
   e.preventDefault();
+
   const contact = {
     name: this.state.name,
     email: this.state.email,
@@ -76,8 +92,12 @@ onSubmit(e){
 //122 video
   axios.post('http://localhost:5000/contacts/add', contact)
   .then(res => console.log(res.data))
+
   // window.location = '/';
+
 }
+
+
 render() {
   return (
     <div className="pageContain">
@@ -118,7 +138,9 @@ render() {
                onChange={this.onChangeMessage}
               />
     </div>
+
     <div className="form-group">
+
     <label>Phone Number</label>
                 <input 
                type="text"
@@ -128,6 +150,7 @@ render() {
                onChange={this.onChangePhoneNumber}
               />
     </div>
+    
              <div className="form-group">
            <label>Date:</label>
              <div>

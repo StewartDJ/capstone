@@ -3,14 +3,18 @@ import { Link } from 'react-router-dom'
 import {UncontrolledDropdown,DropdownToggle,DropdownMenu, DropdownItem,} from 'reactstrap'
 import { Nav } from 'react-bootstrap'
 import axios from 'axios';
+
 export default class Navbar extends Component {
+
     state = { 
         name: ' ',
         locations: [] 
       }
+    
     componentDidMount(){
       this.getLocationPost();
     }
+    
     getLocationPost() {
         axios.get('http://localhost:5000/all-locations')
        .then((res) => {
@@ -23,7 +27,9 @@ export default class Navbar extends Component {
           alert('error ABANDON SHIP!!!')
         });
       }
+        
     render() {
+        
         return (
             <nav className="navbar navbar-light bg-warning justify-content-between navbar-expand-lg">
                 <Link to="/" className="navbar-brand " > <img src={require('../assets/planeicon.png')} width="40px" alt="icon" class="icon"/>  EXPLORE CINCINNATI  </Link>
@@ -67,17 +73,26 @@ export default class Navbar extends Component {
                                 </DropdownMenu>
                                 </UncontrolledDropdown>
                                             </ul>
+
             </div>
+
+
+            
                 <form className="form-inline" method="get" action="https://google.com/search" method="get" autocomplete="on">
                 <input list="places" className="form-control mr-sm-2" type="text" placeholder="Search Google" aria-label="Search Google" id="searchName" name="q"/> 
+                
 <datalist id="places">
 <option value="Hotels in Cincinnati"/>
 <option value="Public Transportation in Cincinnati"/>
 <option value="Cincinnati History"/>
 <option value="Cincinnati Facts"/>
 <option value="Airports in Cincinnati"/>
+
 </datalist>
+
                 <button className="btn btn-info buttons" type="submit" value="Google Search">Search</button>
+                
+                
                 </form>
                 </nav>
         )

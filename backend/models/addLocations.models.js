@@ -6,6 +6,8 @@ const objectSchema = new Schema({
     state:{type: String, required: true},
     zipCode:{type: Number, required: true}
 })
+
+
 const addLocationsSchema = new Schema({
   name: { type: String, required: true },
   description: {type: String, required: true},
@@ -15,10 +17,13 @@ const addLocationsSchema = new Schema({
   location: {type: objectSchema, required: true},
     indoors:{type: Boolean, required: true },    
     familyFriendly:{type: Boolean, required: true }
+
     //possibly add category here
   }); 
+ 
  const TouristDestination = mongoose.model(
   "TouristDestination",
   addLocationsSchema
 );
+
 module.exports = TouristDestination;

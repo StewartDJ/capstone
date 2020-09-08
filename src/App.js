@@ -13,6 +13,7 @@ import categoryView from './components/categoryView';
 import categoryShop from './components/categoryShop';
 import categoryLearn from './components/categoryLearn';
 import categorySkate from './components/categorySkate';
+import PageNotFound from './components/404'
 
 import './style.css';
 
@@ -29,18 +30,21 @@ function App() {
     <Route path='/addLocations' component={addLocations} />
     <Route path='/allLocations' component={allLocations} />
     <Route path='/contacts' component={contacts} />
-    </Switch>
-
+    
     <Route path='/categoryArt' component={categoryArt} />
     <Route path='/categoryPlay' component={categoryPlay} />
     <Route path='/categoryView' component={categoryView} />
     <Route path='/categoryShop' component={categoryShop} />
     <Route path='/categoryLearn' component={categoryLearn} />
     <Route path='/categorySkate' component={categorySkate} />
+    <Route path="*" component={PageNotFound} />
+    
 
+    </Switch>
     <Footer />
+   
       </div>
-      
+  
       </BrowserRouter>
 
       

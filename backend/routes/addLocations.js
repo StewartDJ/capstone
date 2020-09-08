@@ -5,9 +5,14 @@ router.use(function(req, res, next) {
   console.log(req.method + " " + req.path + " " + req.ip);
   next();
 })
+
 router.use(bodyParser.urlencoded({ extended: false }))
+
 router.use(bodyParser.json())
+
 router.get("/body-parsed-info")
+
+
 router.route('/').get((req,res) => {
   TouristDestination.find()
         .then((touristDestinations) =>{res.json(touristDestinations)})
@@ -62,5 +67,8 @@ router.route('/').get((req,res) => {
                       console.log(err);
                     });
                   })
+                  
+                 
         // end add more routes
+
         module.exports = router;
