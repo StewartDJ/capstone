@@ -1,14 +1,19 @@
 /* html {
-  background-color: #F0F0F0;
+  background-color: #f0f0f0;
 } */
 /* 
 .navText{
+
 } */
+
+
 #bannerWrapper{
   position: relative;
   text-align: center;
   color: white;
+ 
 }
+
 #bannerWrapper img{
   object-fit: cover;
   width: 100%;
@@ -16,9 +21,11 @@
   height: 550px;
   overflow-y: hidden;
 }
+
 .icon {
   margin: 10px;
 }
+
 .bannerText {
   text-shadow: 2px 2px 10px black;
   font-size: 50px;
@@ -27,6 +34,7 @@
   left: 50%;
   transform: translate(-50%, -50%);
 }
+
 .layoutHomeRight{
   float: left;
   width: 56%;
@@ -34,18 +42,22 @@
   overflow-wrap: normal;
   overflow:hidden;
 }
+
 .divider {
   background-color: brown;
   width: 100%;
   height: 20vh;
   float: left;
 }
+
 #icon {
   padding-right: 5px;
 }
+
 ul li {
   list-style: none;
 }
+
 .styleOfHeaderHome
 {
   /* border-bottom: 5px solid brown; */
@@ -53,10 +65,13 @@ ul li {
   margin-bottom: 20px;
   width: 50vw;
 }
+
 .underline  {
   position: relative;
   /* border-bottom: 5px solid brown; */
    /* padding: 10px; */
+   
+  
 }
  /* .underline:hover {
   /* border-bottom: 5px solid brown; */   
@@ -75,13 +90,18 @@ ul li {
   /* margin-top: 20px; */
   margin-bottom: -3px;
 }
+
 .underline:hover::before{
   visibility: visible;
   transform: scaleX(1);
 }
+
+
 .yellowText {
-  color: yellow;
+  text-transform: uppercase;
+  color: hsl(45, 100%, 51%);
 }
+
 h2 {
   padding-top: 20px;
   margin-top: 20px;
@@ -89,29 +109,47 @@ h2 {
   margin-bottom: 20px;
  float: left;
 }
+
 .footText {
-  text-shadow: 1px 1px 3px white;
   bottom: 0px;
   margin-top: 80px;
 }
+
+.footText p {
+  padding-bottom: -20px;
+  padding-top: -20px;
+}
+
+.footerFix {
+ 
+background-color: red; 
+width: 100%;
+height: 20px;
+}
+
+
 .layoutPageBody{
-  /* background-color: #F0F0F0;  */
+  /* background-color: #f0f0f0;  */
   width: 100%;
   height: 100vh;
   padding-left: 80px;
   padding-right: 80px;
   padding-top: 20px;
 }
+
 .layoutPageBody2{
-  background-color: #F0F0F0;
+  background-color: #f0f0f0;
   width: 100vw;
   height: 100vh;
+ 
 }
+
 html{
   background: white;
 }
 .layoutFooter{
-  background-color: hsl(199, 40%, 51%);
+  /* background-color: hsl(199, 40%, 51%); */
+background-color: rgb(54,54,54);
   width: 100%;
   height: 35vh;
   background-image: url('./assets/skybottom.png');
@@ -120,18 +158,22 @@ html{
   /* border-top: 2px dashed white; */
   margin-top: 20px; 
   float: left;
+  
 }
+
 .layoutHomeLeft{
   float: left;
   width: 44%;
   height: 56vh;
   overflow: hidden;
 }
+
 .layoutHomeLeft img{
   float: left;
   height: 56vh;
   overflow: hidden;
 }
+
 .gridElements{
   height: 400vh;
   position: relative;
@@ -143,9 +185,11 @@ html{
   overflow: hidden;
   color: white;
 }
+
 .gridElements img{
   width: 600px;
 }
+
 .gridElements img:hover{
   transform: scale(1.5); 
    border: 2px solid yellow;
@@ -153,11 +197,13 @@ html{
   -webkit-filter: blur(3px); /* Safari 6.0 - 9.0 */
   filter: blur(3px);
 }
+
 .imgWithText{
   position: relative;
   text-align: left;
   color: black;
   text-align: left 
+  
 }
 .bottom-left {
   padding: 5px;
@@ -170,33 +216,42 @@ html{
   font-weight: bold;
   text-shadow: 1px 1px 5px black;
 } 
+
 .footer{
   padding: 20px;
   /* flex-shrink: 0; */
   /* position:fixed; */
 }
+
+
 .whiteText {
   color: white;
 }
+
 .blurb{
   float: left;
   margin-bottom: 20px;
 }
+
 a:link {
   color: inherit; 
 }
+
 a:visited {
   color: inherit; 
  text-decoration: none;
 }
+
 a:hover {
   text-decoration: none;
-  color: brown;
+  
 }
+
 a:active {
   color: inherit; 
   text-decoration: none;
 }
+
 .infoBlock {
   background-color: white;
   padding: 20px;
@@ -207,6 +262,9 @@ a:active {
   overflow-y: auto;
   box-shadow: 2px 2px 10px black;
 }
+
+
+
 .yellowEdge {
   background-color: hsl(45, 100%, 51%);
   height: 40rem;
@@ -226,6 +284,8 @@ a:active {
   float: left;
   overflow: hidden; */
 }
+
+
 .theLocations {
   margin: 20px;
   padding-left: 20px;
@@ -236,59 +296,97 @@ a:active {
     overflow: hidden;
     height: 400px;
   width: 100%;
+  
 }
-.theLocations h2 {
+
+.container {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* .theLocations h2 h5 h6 p hr{
+  margin-right: 20px;
   font-weight: bold;
-  display: block;
-}
+  float: left;
+  background-color: red;
+} */
+
 .theLocations img {
   /* min-height: 100%; */
 width: 50vw;
 padding-left: 40px;
 }
-.theLocations hr {
+
+.theLocations h2 {
   margin: 20px;
-  border-top: 5px solid black;
-  display: block;
+  flex: left;
+  border-bottom: 5px solid black;
+  /* display: block; */
+
 }
+
+.theLocations img{
+  height: 100%;
+}
+
 .theLocations a {
-  color: blue;
+  color: black;
   font-weight: bold;
 }
+
 .innerContents {
   /* background-color: blue; */
-  padding: 20px;
-  padding-left: 40px;
+  /* padding-top: 10px; */
+  /* padding-bottom: 20px; */
+  padding-left: 20px;
+  padding-right: 20px;
   /* margin: -20; */
 width: 50%;
+/* background-color: red; */
   float: left;
+  display: grid;
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  grid-template-columns: 95%;
 }
 /* .scroll {
 } */
 .imageDiv{
   overflow: hidden;
-  margin: -20px;
+  margin: 0px;
+  height: 100vh;
+  width: auto;
   /* margin-right: -40px; */
+
 }
 .imageDiv img {
   /* background-color: green; */
   /* width: 50%; */
   height: 50%;
+margin-left: 20px;
   float: right;
 }
+
+
+
 .contactHeader{
   border-bottom: 5px solid brown;
 }
+
  .buttons{
   background-color: hsl(199, 40%, 51%) !important;
 } 
+
 .pageHeading{
-  margin-top: 10px;
+  margin-top: 20px;
   margin-bottom: 50px;
 }
+
 .navUnderline{
   position: relative;
 }
+
 .navUnderline::before{
   content: "";
   position: absolute;
@@ -305,19 +403,23 @@ width: 50%;
   /* margin-top: 20px; */
   /* margin-bottom: -20px; */
 }
+
 .navUnderline:hover::before{
   visibility: visible;
   transform: scaleX(1);
 }
+
  /* .line{
   border-left: 5px solid  hsl(199, 40%, 51%);
   height: 30px;
   display: flex;
   justify-content: space-between;
     } */
+  
 .layout404 img{
   width: 50vw;
 }
+
 .layout404{
   margin: 20px;
 }

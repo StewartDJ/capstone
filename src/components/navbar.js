@@ -24,6 +24,7 @@ export default class Navbar extends Component {
         });
       }
     render() {
+        
         return (
             <nav className="navbar navbar-light bg-warning justify-content-between navbar-expand-lg">
                 <Link to="/" className="navbar-brand " > <img src={require('../assets/planeicon.png')} width="40px" alt="icon" class="icon"/>  EXPLORE CINCINNATI  </Link>

@@ -12,9 +12,15 @@ import BootstrapCarousel from "../BootstrapCarousel"
 // import viewSquares from './viewSquares';
 
 export default class Home extends Component {
+
+
     render() {
+
+
         return (
             
+
+
 <div>
 <Banner />
            
