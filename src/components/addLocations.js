@@ -5,13 +5,9 @@ import axios from 'axios';
 import ToggleButton from 'react-bootstrap/ToggleButton'
 import ToggleButtonGroup from 'react-bootstrap/ToggleButtonGroup'
 import Button from 'react-bootstrap/button'
-
-
 export default class addLocations extends Component {
-    
             constructor(props) {
                 super(props);
-
                   this.onChangeName = this.onChangeName.bind(this);
                   this.onChangeDescription = this.onChangeDescription.bind(this);
                   this.onChangeWebsite = this.onChangeWebsite.bind(this);
@@ -25,7 +21,6 @@ export default class addLocations extends Component {
                   this.onChangeFamilyFriendlyYes = this.onChangeFamilyFriendlyYes.bind(this)
                   this.onChangeFamilyFriendlyNo = this.onChangeFamilyFriendlyNo.bind(this)
                   this.onSubmit = this.onSubmit.bind(this);
-              
                   this.state = {
                     name: "",
                     description: "",
@@ -71,27 +66,22 @@ export default class addLocations extends Component {
         this.setState({
         name: e.target.value
         })}
-
         onChangeDescription(e){
         this.setState({
         description: e.target.value
         })}
-
         onChangeWebsite(e) {
         this.setState({
         website: e.target.value
         })}
-
         onChangeImageUrl(e) {
         this.setState({
         imageUrl: e.target.value
         })}
-
         onChangeAddress(e) {
         this.setState ({
           location: {
             ...this.state.location,
-
                 address: e.target.value
         }
         })}
@@ -167,18 +157,14 @@ export default class addLocations extends Component {
                   city: this.state.location.city,
                   state: this.state.location.state,
                   zipCode:this.state.location.zipCode, 
-
                   indoors: this.state.indoors, 
                   familyFriendly: this.state.familyFriendly
                 }
                 console.log(newLocation)
-
                 axios.post('http://localhost:5000/all-locations/add', newLocation)
                 .then((res) => {console.log(res.data)})
                   window.location = '/allLocations'
               }
-             
-          
   render(){
     
     return ( 
@@ -187,7 +173,6 @@ export default class addLocations extends Component {
                <img src={require('../assets/image.jpeg')} alt="banner"/>
                     </div>
         <div className="container">
-
             <h3 className="underline pageHeading">Add Your Own Destination!</h3>
 <form onSubmit={this.onSubmit}>
 <div className="form-group">

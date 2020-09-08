@@ -3,18 +3,14 @@ import { Link } from 'react-router-dom'
 import {UncontrolledDropdown,DropdownToggle,DropdownMenu, DropdownItem,} from 'reactstrap'
 import { Nav } from 'react-bootstrap'
 import axios from 'axios';
-
 export default class Navbar extends Component {
-
     state = { 
         name: ' ',
         locations: [] 
       }
-    
     componentDidMount(){
       this.getLocationPost();
     }
-    
     getLocationPost() {
         axios.get('http://localhost:5000/all-locations')
        .then((res) => {
@@ -27,7 +23,6 @@ export default class Navbar extends Component {
           alert('error ABANDON SHIP!!!')
         });
       }
-
     searchbar(locations) {
       if (!locations.length) return null;
        return locations.map((destination, index) => {
@@ -39,7 +34,6 @@ export default class Navbar extends Component {
     }
         
     render() {
-        
         return (
             <nav className="navbar navbar-light bg-warning justify-content-between navbar-expand-lg">
                       
@@ -85,12 +79,9 @@ export default class Navbar extends Component {
                                 </DropdownMenu>
                                 </UncontrolledDropdown>
                                             </ul>
-
             </div>
-            
-                <form className="form-inline" method="get" action="https://google.com/search" method="get" autocomplete="on">
+                <form className="form-inline" method="get" action="https://google.com/search" autocomplete="on">
                 <input list="places" className="form-control mr-sm-2" type="text" placeholder="Search Google" aria-label="Search Google" id="searchName" name="q"/> 
-                
 <datalist id="places">
 <option value="Hotels in Cincinnati"/>
 <option value="Public Transportation in Cincinnati"/>
@@ -99,41 +90,9 @@ export default class Navbar extends Component {
 <option value="Airports in Cincinnati"/>
 {this.searchbar(this.state.locations)}
 </datalist>
-
                 <button className="btn btn-info buttons" type="submit" value="Google Search">Search</button>
-                
-                
                 </form>
                 </nav>
         )
     }
 }
-
-// const endpoint = 'insert the json within this quotes';
-// const name = [];
-// fetch(endpoint)
-// .then(blob => blob.json())
-// .then(data => name.push(...data))
-// function findMatches(wordToMatch, name) {
-//   return name.filter(place => {
-// const regex = new RegExp(wordToMatch, 'gi');
-// return place.name.match(regex) 
-// });
-// }
-// function displayMatches(){
-//   const matchArray = findMatches(this.value, name);
-//   const html = matchArray.map(place => {
-//     const regex = new RegExp(this.value, 'gi');
-//     const locationName = place.name.replace(regex, `<span class="hl">${this.value}</span>`);
-//     return `
-//     <li>
-//     <span class="name">${locationName}</span>
-//     </li> 
-//     `;
-//   }).join('');
-//   suggestions.innerHTML = html;
-// }
-// const searchInput = document.querySelector('.search');
-// const suggestions = document.querySelector('.suggestions')
-// searchInput.addEventListener('change', displayMatches);
-// searchInput.addEventListener('keyup', displayMatches);

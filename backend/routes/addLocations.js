@@ -1,7 +1,6 @@
 const router = require('express').Router()
 let TouristDestination = require('../models/addLocations.models');
 var bodyParser =require('body-parser');
-
 router.use(function(req, res, next) {
   console.log(req.method + " " + req.path + " " + req.ip);
   next();
@@ -22,7 +21,6 @@ router.route('/').get((req,res) => {
             res.status(400).json("Error:" + err)
         });
 });
-
         router.route('/add').post((req,res) => {
             const name = req.body.name
                 const description = req.body.description
@@ -34,7 +32,6 @@ router.route('/').get((req,res) => {
                 const zipCode = req.body.location.zipCode
                 const familyFriendly = req.body.familyFriendly
                 const indoors = req.body.indoors
-
                 const newLocation = new TouristDestination (
                     {
                         name,
@@ -50,12 +47,10 @@ router.route('/').get((req,res) => {
                         familyFriendly,
                       }
                 )
-
                 newLocation.save()
                 .then(() => res.json('Location added!'))
                 .catch(err => res.status(400).json('Error: ' + err));
               });
-
         // add more routes
                 router.route('/:id').get((req,res)=>{
                   TouristDestination.findById(req.params.id)
@@ -63,7 +58,6 @@ router.route('/').get((req,res) => {
                     .catch((err) => {res.status(400).json("Error:" + err)
                     })
                  })
-
                  router.get("/all-locations", (req, res) => {
                     TouristDestination.find()
                     .then((result) => {
