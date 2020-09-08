@@ -16,7 +16,6 @@ export default class Contacts extends Component {
     this.onChangePhoneNumber = this.onChangePhoneNumber.bind(this);
     this.onChangeMessage = this.onChangeMessage.bind(this);
 this.onSubmit = this.onSubmit.bind(this)
-
     this.state = {
       name: "",
       email: "",
@@ -58,19 +57,16 @@ onChangeName(e){
     name: e.target.value
   });
 }
-
 onChangeEmail(e){
   this.setState({
     email: e.target.value
   });
 }
-
 onChangePhoneNumber(e){
   this.setState({
     phoneNumber: e.target.value
   })
 }
-
 onChangeMessage(e){
   this.setState({
     message: e.target.value
@@ -92,7 +88,6 @@ onSubmit(e){
     message: this.state.message,
     date: this.state.date
   }
-
   console.log(contact);
 //122 video
   axios.post('http://localhost:5000/contacts/add', contact)
@@ -134,7 +129,6 @@ render() {
           />
     </div>
     <div className="form-group">
-
     <label>Leave us a short message! </label>
                 <input 
                type="text"

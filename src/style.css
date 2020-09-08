@@ -1,11 +1,11 @@
 /* html {
   background-color: #f0f0f0;
 } */
-/* 
-.navText{
 
-} */
 
+/* .navText{
+
+} */ 
 
 #bannerWrapper{
   position: relative;
@@ -60,10 +60,10 @@ ul li {
 
 .styleOfHeaderHome
 {
-  /* border-bottom: 5px solid brown; */
+  /* border-bottom: 5px solid brown;
   padding: 10px;
   margin-bottom: 20px;
-  width: 50vw;
+  width: 50vw; */
 }
 
 .underline  {
@@ -422,4 +422,65 @@ margin-left: 20px;
 
 .layout404{
   margin: 20px;
+}
+
+.artCarousel{
+ 
+ height: 750px;
+ 
+}
+
+.fillerText{
+  font-size: 24px;
+}
+
+.artPageExamples{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 700px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    
+    
+}
+
+.artHeaders{
+  margin-left: 35%;
+  font-size: 40px;
+  padding-bottom: 3%;
+}
+
+.royyal{
+  display: flex;
+  margin-left: 15%;
+   
+   width: 800px;
+   
+   
+}
+
+.shopping{
+  display: flex;
+  margin-left: 20%;
+   /* padding-bottom: 3%;
+  padding-top: 3%;  */
+   width: 700px;
+   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.shopHeader{
+  
+  text-align: center;
+  padding-bottom: 1%;
+  padding-top: 3%;
+}
+.ender{
+  text-align: center;
+}
+
+.shopBlurb{
+  padding-top: 3%;
+}
+.shopVid{
+  margin-left: 6%;
 }

@@ -265,6 +265,10 @@ No</ToggleButton>
     </ToggleButtonGroup>
     <br></br>
     </div>   
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4d70b51cfbaf58f413d9c4dec239fb025a7215f0
  <Button variant="info" className="buttons" size="lg" block type="submit">Submit!</Button>
         </form>
         </div></div>
@@ -272,37 +276,3 @@ No</ToggleButton>
     }
   }
 
-//   <div className="form-group">
-//   <label>Is this an indoor destination?</label>
-//   {/* <br></br> */}
-//   {/* const handleChange = (val) => setValue(val); */}
-
-     
-//  <ToggleButtonGroup 
-//  type="radio" 
-//  name="options" 
-//  className="mb-2 buttons " >
-
-// <ToggleButton
-// variant="info"
-// className="buttons form-control" 
-// value={1}
-// onChange={this.onChangeIndoors}>Yes
-// </ToggleButton>
-
-
-// <ToggleButton variant="info" className="buttons" value={0} onChange={this.onChangeIndoors}>No</ToggleButton>
-// </ToggleButtonGroup>
-
-//      </div>          
-//  <div className="form-group">  
-//  <label>Is this location family friendly?</label>
-//  <br></br>
-     
-//      <ToggleButtonGroup type="radio" name="options" className="mb-2" >
-//    <ToggleButton variant="info" className="buttons" value={1} onChange={this.onChangeFamilyFriendly}>Yes</ToggleButton>
-//     <ToggleButton variant="info" className="buttons" value={0} onChange={this.onChangeFamilyFriendly}>No</ToggleButton>
-//     </ToggleButtonGroup>
-//     <br></br>
-//     </div>   
-//     <Button variant="info" className="buttons" size="lg" block type="submit">Submit!</Button>

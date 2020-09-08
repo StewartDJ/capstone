@@ -23,8 +23,17 @@ export default class Navbar extends Component {
           alert('error ABANDON SHIP!!!')
         });
       }
+<<<<<<< HEAD
+=======
+    searchbar(locations) {
+      if (!locations.length) return null;
+       return locations.map((destination, index) => {
+        console.log(destination.name)
+       return <option value = {destination.name}/>
+      })
+    }
+>>>>>>> 4d70b51cfbaf58f413d9c4dec239fb025a7215f0
     render() {
-        
         return (
             <nav className="navbar navbar-light bg-warning justify-content-between navbar-expand-lg">
                 <Link to="/" className="navbar-brand " > <img src={require('../assets/planeicon.png')} width="40px" alt="icon" class="icon"/>  EXPLORE CINCINNATI  </Link>
@@ -77,6 +86,10 @@ export default class Navbar extends Component {
 <option value="Cincinnati History"/>
 <option value="Cincinnati Facts"/>
 <option value="Airports in Cincinnati"/>
+<<<<<<< HEAD
+=======
+{this.searchbar(this.state.locations)}
+>>>>>>> 4d70b51cfbaf58f413d9c4dec239fb025a7215f0
 </datalist>
                 <button className="btn btn-info buttons" type="submit" value="Google Search">Search</button>
                 </form>
