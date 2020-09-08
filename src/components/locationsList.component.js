@@ -52,16 +52,10 @@ getLocationPost() {
          </div>
              <br />
 </div>
-<<<<<<< HEAD
 <div className="imageDiv"> <img src=  {destination.imageUrl} /> </div>
       </div>
 
       
-=======
-<div className="imageDiv">
-   <img src=  {destination.imageUrl} alt="location"   /> </div>
-      </div> 
->>>>>>> 4d70b51cfbaf58f413d9c4dec239fb025a7215f0
         )
     });
   };
