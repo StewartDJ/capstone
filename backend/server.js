@@ -17,8 +17,10 @@ mongoose
 console.log('in the name of all that is holy, I beg of thee')
 mongoose.connection.on('open', () => {  console.log("MongoDB database connection established successfully");})
 mongoose.connection.on('error', (err) => {  console.log(err);})
+
 const addLocationsRouter = require('./routes/newLocations');
 const contactsRouter = require('./routes/newContacts');
+
 app.use('/addLocations', addLocationsRouter);
 app.use('/contacts', contactsRouter);
 app.listen(port, () => {

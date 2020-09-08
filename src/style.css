@@ -1,9 +1,30 @@
 /* html {
   background-color: #F0F0F0;
 } */
-/* 
+
+
 .navText{
-} */
+  font-weight: bolder;
+  font-size: 16px;
+
+}
+.navText1{
+  margin-right: 20px;
+}
+.navText2{
+  margin-right: 20px;
+}
+.navText3{
+  margin-right: 20px;
+}
+.navText4{
+  margin-right: 20px;
+}
+.navText5{
+  margin-right: 20px;
+}
+
+
 #bannerWrapper{
   position: relative;
   text-align: center;
@@ -46,12 +67,12 @@
 ul li {
   list-style: none;
 }
-.styleOfHeaderHome
+ .styleOfHeaderHome
 {
-  /* border-bottom: 5px solid brown; */
+  /* border-bottom: 5px solid brown;
   padding: 10px;
   margin-bottom: 20px;
-  width: 50vw;
+  width: 50vw; */
 }
 .underline  {
   position: relative;
@@ -320,4 +341,62 @@ width: 50%;
 }
 .layout404{
   margin: 20px;
+}
+
+.artCarousel{
+ 
+ height: 750px;
+ 
+}
+
+.fillerText{
+  font-size: 24px;
+}
+
+.artPageExamples{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 700px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    
+    
+}
+
+.artHeaders{
+  margin-left: 35%;
+  font-size: 40px;
+  padding-bottom: 3%;
+}
+
+.royyal{
+  display: flex;
+  margin-left: 15%;
+   
+   width: 800px;
+   
+   
+}
+
+.shopping{
+  display: flex;
+  margin-left: 20%;
+   /* padding-bottom: 3%;
+  padding-top: 3%;  */
+   width: 700px;
+   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.shopHeader{
+  
+  text-align: center;
+  padding-bottom: 1%;
+  padding-top: 3%;
+}
+.ender{
+  text-align: center;
+}
+
+.shopBlurb{
+  padding-top: 3%;
 }
