@@ -263,7 +263,9 @@ a:active {
   box-shadow: 2px 2px 10px black;
 }
 
-
+.uppercase {
+  text-transform: uppercase;
+}
 
 .yellowEdge {
   background-color: hsl(45, 100%, 51%);
