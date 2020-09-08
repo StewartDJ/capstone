@@ -75,8 +75,6 @@ export default class Navbar extends Component {
                                             </ul>
 
             </div>
-
-
             
                 <form className="form-inline" method="get" action="https://google.com/search" method="get" autocomplete="on">
                 <input list="places" className="form-control mr-sm-2" type="text" placeholder="Search Google" aria-label="Search Google" id="searchName" name="q"/> 
@@ -87,7 +85,6 @@ export default class Navbar extends Component {
 <option value="Cincinnati History"/>
 <option value="Cincinnati Facts"/>
 <option value="Airports in Cincinnati"/>
-
 </datalist>
 
                 <button className="btn btn-info buttons" type="submit" value="Google Search">Search</button>
