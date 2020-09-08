@@ -53,11 +53,7 @@ getLocationPost() {
          </div>
              <br />
 </div>
-<<<<<<< HEAD
 <div className="imageDiv"> <img src=  {destination.imageUrl} /> </div>
-=======
-<div className="imageDiv"> <img src=  {destination.imageUrl} alt="destination"/> </div>
->>>>>>> 76a7d6f981a5633c555e57f418f093fd071c3cb4
       </div>
 
       

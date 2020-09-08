@@ -8,16 +8,29 @@ export default class Skate extends Component {
 
            <div className=''>
 
-            <div className='container' style={{ textAlign: "center", marginTop: 140, width: '100%' }}>
+            <div className='container' style={{ textAlign: "center", marginTop: 70, width: '100%' }}>
                 <div className='row'>
 
-            <div className='col'>
-            <img style={{ padding:'0rem', maxWidth: 600, minHeight: 500, marginRight: 520, transform: 'scale(1.3)' }} src={require('../assets/skater1.jpg')} alt='first skater' />
+
+                <div className='infoBlock' style={{ width: 500, marginLeft: 800 }}>
+                <p><b>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque laborum minima porro aliquid asperiores quasi recusandae ipsam, quam sapiente. Nesciunt itaque magnam exercitationem tenetur, consequuntur provident corporis sapiente velit fuga?</b></p>
             </div>
 
+
             <div className='col'>
-            <img style={{ padding:'0rem', maxWidth: 680, minHeight: 520, marginLeft: 520 }} src={require('../assets/skater2.jpg')} alt='second skater' />
+            <img style={{ padding:'0rem', maxWidth: 600, minHeight: 450, marginRight: 520, transform: 'scale(1.3)' }} src={require('../assets/skater7.jpg')} alt='issa skater' />
             </div>
+
+
+            <div className='col'>
+            <img style={{ padding:'0rem', maxWidth: 600, minHeight: 450, marginLeft: 510, transform: 'scale(1.3)' }} src={require('../assets/skater9.jpg')} alt='another skater' />
+            </div>
+
+
+            <div className='infoBlock2' style={{ width: 500, marginRight: 800 }}>
+                <p><b>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid cupiditate quas beatae iusto nulla unde, possimus officiis soluta est, deleniti voluptatum fuga! Explicabo laboriosam nulla at deleniti iste tempore voluptate.</b></p>
+            </div>
+
 
             </div>
             </div>
