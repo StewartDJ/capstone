@@ -58,7 +58,7 @@ getLocationPost() {
         <a href= "{destination.website}"> visit website</a>
         </div>
 </div>
-<div className="imageDiv"> <img src=  {destination.imageUrl}  /> </div>
+<div className="imageDiv"> <img src=  {destination.imageUrl} /> </div>
       </div>
 
       

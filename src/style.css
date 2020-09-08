@@ -73,7 +73,7 @@ ul li {
   transform: scaleX(0);
   transition: all 0.8s ease-in-out 0s;
   /* margin-top: 20px; */
-  margin-bottom: -20px;
+  margin-bottom: -3px;
 }
 .underline:hover::before{
   visibility: visible;
@@ -263,8 +263,8 @@ padding-left: 40px;
 width: 50%;
   float: left;
 }
-.scroll {
-}
+/* .scroll {
+} */
 .imageDiv{
   overflow: hidden;
   margin: -20px;
