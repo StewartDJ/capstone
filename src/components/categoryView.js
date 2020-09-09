@@ -4,6 +4,7 @@ export default class View extends Component {
     render() {
         return (
             <div className="container">
+                <center>
  <h1 className="underline shopHeader">Sights To See</h1>
  <img src={require('../assets/view.jpg')} alt="view" className="view"/>
 
@@ -12,7 +13,7 @@ export default class View extends Component {
 In 2008, the museum acquired a single-arch 1963 McDonald's sign from Huntsville, Alabama. The sign features McDonald's Speedee character, who was phased out in favor of Ronald McDonald in the 1960s. In 2009, the museum added a neon sign from Johnny’s Big Red Grill, once a popular restaurant among Cornell University students.</p>
 
             <iframe width="560" height="315" src="https://www.youtube.com/embed/FYHIwThvqDs" title="sign" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen ></iframe>
-          
+          </center>
 
             </div>
         )
