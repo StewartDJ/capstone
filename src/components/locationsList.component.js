@@ -46,17 +46,15 @@ getLocationPost() {
 <div className="grid-item uppercase"><center> {destination.location.address} {destination.location.city} {destination.location.state} {destination.location.zipCode} </center></div>
 <br/>
   <div className="grid-item"> <p>{destination.description}</p> </div>
-
   <div className="grid-item">  <a href= {destination.website} target="_blank" className="btn btn-warning" rel="noopener noreferrer"> VISIT WEBSITE</a> </div>
 </div>
       <div> 
          </div>
              <br />
 </div>
-<div className="imageDiv"> <img src=  {destination.imageUrl} /> </div>
-      </div>
-
-      
+<div className="imageDiv">
+   <img src=  {destination.imageUrl} alt="location"   /> </div>
+      </div> 
         )
     });
   };
